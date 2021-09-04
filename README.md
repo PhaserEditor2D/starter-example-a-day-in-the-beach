@@ -1,8 +1,8 @@
 # Webpack + TypeScript project template for Phaser Editor 2D
 
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/PhaserEditor2D/starter-template-webpack)
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-908a85?logo=gitpod)](https://gitpod.io/#https://github.com/PhaserEditor2D/starter-example-a-day-in-the-beach)
 
-A project template for Phaser 3, Webpack 5, TypeScript, and Phaser Editor 2D v3.
+An example game made with Phaser Editor 2D. Based in Phaser 3, Webpack 5, TypeScript, and Phaser Editor 2D v3.
 
 ## First steps
 
