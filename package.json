@@ -22,10 +22,10 @@
     "typescript": "^4.2.3",
     "webpack": "^5.28.0",
     "webpack-clean-plugin": "^0.2.3",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
+    "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "phaser": "^3.55.2"
+    "phaser": "^3.55.2",
+    "webpack-dev-server": "^4.7.2"
   }
 }
