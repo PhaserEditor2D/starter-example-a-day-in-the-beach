@@ -14,6 +14,7 @@ This project requires [Node.js](https://nodejs.org) and [NPM.js](https://www.npm
 
     ```
     npm install
+    npm update
     ```
 
 * Run the development server:
