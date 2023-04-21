@@ -1,8 +1,13 @@
-import preloadPackUrl from "../../static/assets/asset-pack.json";
+
+// You can write more code here
 
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
+import PreloadBarUpdaterScript from "../script-nodes/PreloadBarUpdaterScript";
+/* START-USER-IMPORTS */
+import assetPackUrl from "../../static/assets/asset-pack.json";
+/* END-USER-IMPORTS */
 
 export default class Preload extends Phaser.Scene {
 
@@ -16,16 +21,25 @@ export default class Preload extends Phaser.Scene {
 
 	editorCreate(): void {
 
-		// guapen
-		const guapen = this.add.image(960, 442, "guapen");
-		guapen.scaleX = 0.5915891440784282;
-		guapen.scaleY = 0.5915891440784282;
+		// progressBar
+		const progressBar = this.add.rectangle(832.5, 541, 256, 20);
+		progressBar.setOrigin(0, 0);
+		progressBar.isFilled = true;
+		progressBar.fillColor = 14737632;
 
-		// progress
-		const progress = this.add.text(960, 572, "", {});
-		progress.setOrigin(0.5, 0.5);
-		progress.text = "0%";
-		progress.setStyle({"fontSize":"30px"});
+		// preloadUpdater
+		new PreloadBarUpdaterScript(progressBar);
+
+		// progressBarBg
+		const progressBarBg = this.add.rectangle(832.5, 541, 256, 20);
+		progressBarBg.setOrigin(0, 0);
+		progressBarBg.fillColor = 14737632;
+		progressBarBg.isStroked = true;
+
+		// loadingText
+		const loadingText = this.add.text(831.5, 509, "", {});
+		loadingText.text = "Loading...";
+		loadingText.setStyle({ "color": "#e0e0e0", "fontFamily": "arial", "fontSize": "20px" });
 
 		this.events.emit("scene-awake");
 	}
@@ -38,9 +52,12 @@ export default class Preload extends Phaser.Scene {
 
 		this.editorCreate();
 
-		this.load.pack("asset-pack", preloadPackUrl);
+		this.load.pack("asset-pack", assetPackUrl);
+	}
 
-		this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Welcome"));
+	create() {
+
+		this.scene.start("Welcome");
 	}
 
 	/* END-USER-CODE */

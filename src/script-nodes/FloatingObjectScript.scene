@@ -1,0 +1,43 @@
+{
+    "id": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1920,
+        "borderHeight": 1080
+    },
+    "displayList": [
+        {
+            "prefabId": "5e746613-c01a-42aa-8681-4950bb2f23ce",
+            "id": "0953158b-711b-4e3e-9fcb-2d538bb6b261",
+            "label": "spriteScriptNode",
+            "components": [],
+            "nestedPrefabs": [],
+            "list": []
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    },
+    "prefabProperties": [
+        {
+            "name": "offset",
+            "label": "Offset",
+            "tooltip": "The vertical offset to move the object.",
+            "defValue": 20,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        }
+    ]
+}

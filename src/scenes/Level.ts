@@ -4,12 +4,13 @@ import Star from "../prefabs/Star";
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
-import InteractiveObject from "../components/InteractiveObject";
-import StartSceneOnClick from "../components/StartSceneOnClick";
-import PushOnClick from "../components/PushOnClick";
-import FloatingObject from "../components/FloatingObject";
-import Checkbox from "../components/Checkbox";
-import ClickHandler from "../components/ClickHandler";
+import FloatingObjectScript from "../script-nodes/FloatingObjectScript";
+import OnPointerDownStartSceneScript from "../script-nodes/OnPointerDownStartSceneScript";
+import OnPointerDownScript from "../script-nodes-basic/OnPointerDownScript";
+import PushActionScript from "../script-nodes/PushActionScript";
+import SwitchImageActionScript from "../script-nodes/SwitchImageActionScript";
+/* START-USER-IMPORTS */
+/* END-USER-IMPORTS */
 
 export default class Level extends Phaser.Scene {
 
@@ -56,47 +57,62 @@ export default class Level extends Phaser.Scene {
 		// homeButton
 		const homeButton = this.add.image(1782, 116, "buttons", "Button Pack - Green_Button Green - Home.png");
 
+		// floatingObjectScript_1
+		const floatingObjectScript_1 = new FloatingObjectScript(homeButton);
+
+		// onPointerDownStartSceneScript
+		const onPointerDownStartSceneScript = new OnPointerDownStartSceneScript(homeButton);
+
 		// pauseBtn
 		const pauseBtn = this.add.image(1596, 118, "buttons", "Button Pack - Green_Button Green - Pause.png");
 
-		// homeButton (components)
-		new InteractiveObject(homeButton);
-		const homeButtonStartSceneOnClick = new StartSceneOnClick(homeButton);
-		homeButtonStartSceneOnClick.sceneKey = "Welcome";
-		new PushOnClick(homeButton);
-		const homeButtonFloatingObject = new FloatingObject(homeButton);
-		homeButtonFloatingObject.offset = 5;
+		// onPointerDownScript
+		const onPointerDownScript = new OnPointerDownScript(pauseBtn);
 
-		// pauseBtn (components)
-		new InteractiveObject(pauseBtn);
-		new PushOnClick(pauseBtn);
-		const pauseBtnCheckbox = new Checkbox(pauseBtn);
-		pauseBtnCheckbox.checked = false;
-		pauseBtnCheckbox.checkedTexture = { "key": "buttons", "frame": "Button Pack - Green_Button Green - Play.png" };
-		pauseBtnCheckbox.unckeckedTexture = { "key": "buttons", "frame": "Button Pack - Green_Button Green - Pause.png" };
-		const pauseBtnFloatingObject = new FloatingObject(pauseBtn);
-		pauseBtnFloatingObject.offset = 5;
-		const pauseBtnClickHandler = new ClickHandler(pauseBtn);
-		pauseBtnClickHandler.callback = () => this.onPauseClicked();
+		// pushActionScript
+		const pushActionScript = new PushActionScript(onPointerDownScript);
 
+		// pauseSwitchImageAction
+		const pauseSwitchImageAction = new SwitchImageActionScript(pushActionScript);
+
+		// floatingObjectScript
+		const floatingObjectScript = new FloatingObjectScript(pauseBtn);
+
+		// floatingObjectScript_1 (prefab fields)
+		floatingObjectScript_1.offset = 5;
+
+		// onPointerDownStartSceneScript.startSceneActionScript (prefab fields)
+		onPointerDownStartSceneScript.startSceneActionScript.sceneKey = "Welcome";
+
+		// pauseSwitchImageAction (prefab fields)
+		pauseSwitchImageAction.onTexture = {"key":"buttons","frame":"Button Pack - Green_Button Green - Pause.png"};
+		pauseSwitchImageAction.offTexture = {"key":"buttons","frame":"Button Pack - Green_Button Green - Play.png"};
+		pauseSwitchImageAction.isOn = true;
+
+		// floatingObjectScript (prefab fields)
+		floatingObjectScript.offset = 5;
+
+		this.pauseSwitchImageAction = pauseSwitchImageAction;
 		this.pauseBtn = pauseBtn;
 
 		this.events.emit("scene-awake");
 	}
 
-	private pauseBtn: Phaser.GameObjects.Image | undefined;
+	private pauseSwitchImageAction!: SwitchImageActionScript;
+	private pauseBtn!: Phaser.GameObjects.Image;
 
 	/* START-USER-CODE */
-
-	public paused = false;
 
 	create() {
 
 		this.editorCreate();
 
-		this.paused = false;
-
 		this.spawnItem();
+	}
+
+	get paused() {
+
+		return !this.pauseSwitchImageAction.isOn;
 	}
 
 	spawnItem() {
@@ -112,15 +128,6 @@ export default class Level extends Phaser.Scene {
 			callback: this.spawnItem,
 			callbackScope: this
 		});
-	}
-
-	onPauseClicked() {
-
-		if (this.pauseBtn) {
-
-			const checkbox = Checkbox.getComponent(this.pauseBtn);
-			this.paused = checkbox.checked;
-		}
 	}
 
 	/* END-USER-CODE */

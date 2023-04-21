@@ -24,7 +24,8 @@
                 "key": "sky"
             },
             "originX": 0,
-            "originY": 0
+            "originY": 0,
+            "list": []
         },
         {
             "type": "Image",
@@ -35,7 +36,8 @@
                 "key": "sea"
             },
             "originX": 0,
-            "originY": 0
+            "originY": 0,
+            "list": []
         },
         {
             "type": "Image",
@@ -46,7 +48,8 @@
                 "key": "land"
             },
             "originX": 0,
-            "originY": 0
+            "originY": 0,
+            "list": []
         },
         {
             "type": "Image",
@@ -57,7 +60,8 @@
                 "key": "cloud"
             },
             "originX": 0,
-            "originY": 0
+            "originY": 0,
+            "list": []
         },
         {
             "type": "Image",
@@ -68,7 +72,8 @@
                 "key": "island"
             },
             "originX": 0,
-            "originY": 0
+            "originY": 0,
+            "list": []
         },
         {
             "type": "Image",
@@ -79,18 +84,14 @@
                 "key": "decor"
             },
             "originX": 0,
-            "originY": 0
+            "originY": 0,
+            "list": []
         },
         {
             "type": "Image",
             "id": "67b7ab9c-33e8-4056-ac60-60250b0a261e",
             "label": "playBtn",
-            "components": [
-                "InteractiveObject",
-                "StartSceneOnClick",
-                "PushOnClick"
-            ],
-            "StartSceneOnClick.sceneKey": "Level",
+            "components": [],
             "texture": {
                 "key": "buttons",
                 "frame": "Button Pack - Green_Button Green - Play.png"
@@ -98,97 +99,281 @@
             "x": 960,
             "y": 840,
             "scaleX": 2,
-            "scaleY": 2
+            "scaleY": 2,
+            "list": [
+                {
+                    "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
+                    "id": "4560296d-496e-4a49-8ba8-b93e21cc0d36",
+                    "label": "onPointerDownScript",
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": [
+                        {
+                            "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
+                            "id": "c296c7de-0d52-48b9-91aa-ce7ffcffae68",
+                            "label": "pushActionScript",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": [
+                                {
+                                    "prefabId": "2d3f9249-6fcd-4c7d-bd2f-77fa616af7e8",
+                                    "id": "ea553039-83f6-4ab9-89dd-64540e2e49bf",
+                                    "unlock": [
+                                        "sceneKey"
+                                    ],
+                                    "label": "startSceneActionScript",
+                                    "sceneKey": "Level",
+                                    "components": [],
+                                    "nestedPrefabs": [],
+                                    "list": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Image",
             "id": "ae40c417-e513-4750-b524-04da36402c04",
             "label": "facebookBtn",
-            "components": [
-                "InteractiveObject",
-                "OpenURLOnClick",
-                "PushOnClick"
-            ],
-            "OpenURLOnClick.url": "https://facebook.com/PhaserEditor2D",
+            "components": [],
             "texture": {
                 "key": "buttons",
                 "frame": "Button Pack - Green_Button Green - Facebook.png"
             },
             "x": 160,
-            "y": 920
+            "y": 920,
+            "list": [
+                {
+                    "prefabId": "3e11f6a1-68a0-4fcf-a502-2fbe8bbf696f",
+                    "id": "2b26900d-eff3-4231-ac3f-5ce89c262560",
+                    "label": "onPointerDownOpenURLScript",
+                    "components": [],
+                    "nestedPrefabs": [
+                        {
+                            "prefabId": "bc0c63a7-eb8e-45d6-b210-d661fc56044c",
+                            "id": "9d8ab5b3-8154-4a42-90c4-456e878502d8",
+                            "label": "onPointerDownScript",
+                            "components": [],
+                            "nestedPrefabs": [
+                                {
+                                    "prefabId": "4def6f54-59b2-4cff-9d6f-b88ace4bfe93",
+                                    "id": "a9f69c8c-71a9-4cf9-88a2-5f9ac04840ec",
+                                    "label": "pushActionScript",
+                                    "components": [],
+                                    "nestedPrefabs": [
+                                        {
+                                            "prefabId": "a433f8fe-9815-455b-bc49-c2119c20e205",
+                                            "id": "ee6b1f27-5c11-4ad7-8555-d2804e19a4ff",
+                                            "unlock": [
+                                                "url"
+                                            ],
+                                            "label": "openURLActionScript",
+                                            "url": "https://facebook.com/PhaserEditor2D",
+                                            "components": [],
+                                            "nestedPrefabs": [],
+                                            "list": []
+                                        }
+                                    ],
+                                    "list": []
+                                }
+                            ],
+                            "list": []
+                        }
+                    ],
+                    "list": []
+                }
+            ]
         },
         {
             "type": "Image",
             "id": "86af34e7-d3bf-4142-b9c6-ab9342334f6f",
             "label": "twitterBtn",
-            "components": [
-                "InteractiveObject",
-                "OpenURLOnClick",
-                "PushOnClick"
-            ],
-            "OpenURLOnClick.url": "https://twitter.com/PhaserEditor2D",
+            "components": [],
             "texture": {
                 "key": "buttons",
                 "frame": "Button Pack - Green_Button Green - Twitter.png"
             },
             "x": 360,
-            "y": 920
+            "y": 920,
+            "list": [
+                {
+                    "prefabId": "3e11f6a1-68a0-4fcf-a502-2fbe8bbf696f",
+                    "id": "7253cbfb-b2c8-4835-a8ce-dcb575939b8d",
+                    "label": "onPointerDownOpenURLScript_1",
+                    "components": [],
+                    "nestedPrefabs": [
+                        {
+                            "prefabId": "bc0c63a7-eb8e-45d6-b210-d661fc56044c",
+                            "id": "8673ef13-48ed-4a9e-8b5e-1e4c1d2941b1",
+                            "label": "onPointerDownScript",
+                            "components": [],
+                            "nestedPrefabs": [
+                                {
+                                    "prefabId": "4def6f54-59b2-4cff-9d6f-b88ace4bfe93",
+                                    "id": "0eec5e76-0f41-4522-aefa-0c80e7dbda9a",
+                                    "label": "pushActionScript",
+                                    "components": [],
+                                    "nestedPrefabs": [
+                                        {
+                                            "prefabId": "a433f8fe-9815-455b-bc49-c2119c20e205",
+                                            "id": "bf37340c-5e47-4c4c-abc8-e19971815217",
+                                            "unlock": [
+                                                "url"
+                                            ],
+                                            "label": "openURLActionScript",
+                                            "url": "https://twitter.com/PhaserEditor2D",
+                                            "components": [],
+                                            "nestedPrefabs": [],
+                                            "list": []
+                                        }
+                                    ],
+                                    "list": []
+                                }
+                            ],
+                            "list": []
+                        }
+                    ],
+                    "list": []
+                }
+            ]
         },
         {
             "type": "Image",
             "id": "1d9b8817-cefb-4f7b-ae6f-e9f244735ff5",
             "label": "musicBtn",
             "scope": "CLASS",
-            "components": [
-                "InteractiveObject",
-                "Checkbox",
-                "PushOnClick",
-                "ClickHandler"
-            ],
-            "Checkbox.checkedTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Green_Button Green - Music.png\"}",
-            "Checkbox.unckeckedTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Gray_Button Gray - Music.png\"}",
-            "ClickHandler.callback": "() => GameSounds.toggleMusic()",
+            "components": [],
             "texture": {
                 "key": "buttons",
                 "frame": "Button Pack - Green_Button Green - Music.png"
             },
             "x": 1560,
-            "y": 920
+            "y": 920,
+            "list": [
+                {
+                    "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
+                    "id": "d2a60310-574a-40d9-8bf3-1e70f1422733",
+                    "label": "onPointerDownScript_3",
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": [
+                        {
+                            "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
+                            "id": "c2cca35a-a21e-4ed4-a2f6-bbef213ac550",
+                            "label": "pushActionScript_2",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": [
+                                {
+                                    "prefabId": "b61e7279-4e75-4f73-b26d-4f37ff949c85",
+                                    "id": "f0a9d6cf-9c3f-4062-889c-2f8e2170b3d5",
+                                    "unlock": [
+                                        "onTexture",
+                                        "offTexture",
+                                        "isOn",
+                                        "mementoKey"
+                                    ],
+                                    "label": "musicSwitchImageAction",
+                                    "scope": "CLASS",
+                                    "onTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Green_Button Green - Music.png\"}",
+                                    "offTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Gray_Button Gray - Music.png\"}",
+                                    "isOn": true,
+                                    "mementoKey": "music",
+                                    "components": [],
+                                    "nestedPrefabs": [],
+                                    "list": []
+                                }
+                            ]
+                        },
+                        {
+                            "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
+                            "id": "91bdb37b-36f1-4052-addf-3817f7151675",
+                            "unlock": [
+                                "callback"
+                            ],
+                            "label": "toggleMusicAction",
+                            "callback": "() => GameSounds.toggleMusic()",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Image",
             "id": "00450c48-8f1a-47e3-866c-853972027118",
             "label": "soundBtn",
             "scope": "PUBLIC",
-            "components": [
-                "InteractiveObject",
-                "Checkbox",
-                "PushOnClick",
-                "ClickHandler"
-            ],
-            "Checkbox.checkedTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Green_Button Green - Sound.png\"}",
-            "Checkbox.unckeckedTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Gray_Button Gray - Sound.png\"}",
-            "ClickHandler.callback": "() => GameSounds.toggleEffects()",
+            "components": [],
             "texture": {
                 "key": "buttons",
                 "frame": "Button Pack - Green_Button Green - Sound.png"
             },
             "x": 1760,
-            "y": 920
+            "y": 920,
+            "list": [
+                {
+                    "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
+                    "id": "a038f658-630c-41b4-8c09-ceb828c6ed61",
+                    "label": "onPointerDownScript_2",
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": [
+                        {
+                            "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
+                            "id": "cdd994fc-491f-4ae3-ac28-c747b2b237fc",
+                            "label": "pushActionScript_1",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": [
+                                {
+                                    "prefabId": "b61e7279-4e75-4f73-b26d-4f37ff949c85",
+                                    "id": "0161125f-32aa-4b2e-8ecc-d9f0f52c99ad",
+                                    "unlock": [
+                                        "onTexture",
+                                        "offTexture",
+                                        "isOn",
+                                        "mementoKey"
+                                    ],
+                                    "label": "soundSwitchImageAction",
+                                    "scope": "CLASS",
+                                    "onTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Green_Button Green - Sound.png\"}",
+                                    "offTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Gray_Button Gray - Sound.png\"}",
+                                    "isOn": true,
+                                    "mementoKey": "effects",
+                                    "components": [],
+                                    "nestedPrefabs": [],
+                                    "list": []
+                                }
+                            ]
+                        },
+                        {
+                            "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
+                            "id": "0be8f7ab-e8f4-464e-9d29-5fd5da2bcbd6",
+                            "unlock": [
+                                "callback"
+                            ],
+                            "label": "toggleEffectsAction",
+                            "callback": "() => GameSounds.toggleEffects()",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "Text",
             "id": "e67be255-3d5a-4db6-9d69-55fa7cce2d5f",
             "label": "linkToPhaserEditor",
-            "components": [
-                "InteractiveObject",
-                "OpenURLOnClick"
-            ],
-            "OpenURLOnClick.url": "https://phasereditor2d.com",
+            "components": [],
             "x": 40,
             "y": 40,
-            "originX": 0,
-            "originY": 0,
             "text": "Visit Phaser Editor 2D",
             "paddingLeft": 5,
             "paddingTop": 5,
@@ -197,23 +382,57 @@
             "fontSize": "18px",
             "fontStyle": "bold",
             "color": "#6e5012ff",
-            "backgroundColor": "#c4fe8aff"
+            "backgroundColor": "#c4fe8aff",
+            "list": [
+                {
+                    "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
+                    "id": "6a1373d2-4b1f-4f1d-8756-c896aa260b8f",
+                    "label": "onPointerDownScript_1",
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": [
+                        {
+                            "prefabId": "343cd187-34b1-4df7-9aec-75fdad2977ba",
+                            "id": "2860a885-9ac7-45ff-bb5d-e40c85bf64ef",
+                            "unlock": [
+                                "url"
+                            ],
+                            "label": "openURLActionScript_1",
+                            "url": "https://phasereditor2d.com",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                }
+            ]
         },
         {
             "type": "BitmapText",
             "id": "fd1bd600-a05b-4e11-aeee-5ddda671b5ef",
             "label": "bitmaptext",
-            "components": [
-                "FloatingObject"
-            ],
-            "FloatingObject.offset": 10,
+            "components": [],
             "x": 960,
             "y": 120,
-            "originY": 0,
+            "originX": 0.5,
             "text": "a day in\nthe beach",
             "font": "hyperdrive",
             "align": 1,
-            "fontSize": 150
+            "fontSize": 150,
+            "list": [
+                {
+                    "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                    "id": "bd00c677-4ab8-45d1-9b43-777e47ec8840",
+                    "unlock": [
+                        "offset"
+                    ],
+                    "label": "floatingObjectScript",
+                    "offset": 10,
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": []
+                }
+            ]
         }
     ],
     "plainObjects": [],
@@ -221,6 +440,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 2
+        "version": 3
     }
 }

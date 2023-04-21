@@ -3,7 +3,9 @@ import { GameSounds } from "../GameSounds";
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
-import Level from "~/scenes/Level";
+/* START-USER-IMPORTS */
+import Level from "../scenes/Level";
+/* END-USER-IMPORTS */
 
 export default class Star extends Phaser.GameObjects.Image {
 

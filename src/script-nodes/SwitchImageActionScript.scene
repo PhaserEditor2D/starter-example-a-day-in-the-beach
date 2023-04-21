@@ -1,0 +1,77 @@
+{
+    "id": "b61e7279-4e75-4f73-b26d-4f37ff949c85",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1280,
+        "borderHeight": 720
+    },
+    "displayList": [
+        {
+            "prefabId": "5e746613-c01a-42aa-8681-4950bb2f23ce",
+            "id": "0a6ab275-a8f6-41fb-a4cd-691c937112fe",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "scriptnode_1",
+            "components": [],
+            "nestedPrefabs": [],
+            "list": []
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    },
+    "prefabProperties": [
+        {
+            "name": "onTexture",
+            "label": "ON Texture",
+            "tooltip": "Property 1",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "texture-config"
+            }
+        },
+        {
+            "name": "offTexture",
+            "label": "OFF Texture",
+            "tooltip": "Property 1",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "texture-config"
+            }
+        },
+        {
+            "name": "isOn",
+            "label": "Is On",
+            "tooltip": "Property 1",
+            "defValue": true,
+            "customDefinition": false,
+            "type": {
+                "id": "boolean"
+            }
+        },
+        {
+            "name": "mementoKey",
+            "label": "Memento Key",
+            "tooltip": "A key for remembering the selected value.",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "string"
+            }
+        }
+    ]
+}
