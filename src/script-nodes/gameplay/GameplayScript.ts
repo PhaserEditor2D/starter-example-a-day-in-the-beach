@@ -34,9 +34,12 @@ export default class GameplayScript extends ScriptNode {
 	/* START-USER-CODE */
 
 	private _paused = false;
-	private _spawnEvent?: Phaser.Time.TimerEvent;
-
+	private _spawnStarEvent?: Phaser.Time.TimerEvent;
+	private _nextLevelEvent?: Phaser.Time.TimerEvent;
+	private _baseGravity = 50;
+	private _maxSpawnDelay = 2000;
 	private _points = 0;
+
 
 	private togglePause() {
 
@@ -51,15 +54,28 @@ export default class GameplayScript extends ScriptNode {
 			this.scene.physics.resume();
 		}
 
-		if (this._spawnEvent) {
+		if (this._spawnStarEvent) {
 
-			this._spawnEvent.paused = this._paused;
+			this._spawnStarEvent.paused = this._paused;
 		}
 	}
 
 	protected override awake(): void {
 
 		this.spawnStar();
+
+		this.nextDifficultyLevel();
+	}
+
+	private nextDifficultyLevel() {
+
+		this._baseGravity += 50;
+		this._maxSpawnDelay =  Math.max(this._maxSpawnDelay - 100, 0);
+		
+		this._nextLevelEvent = this.scene.time.addEvent({
+			delay: 5000,
+			callback: () => this.nextDifficultyLevel()
+		});
 	}
 
 	private spawnStar() {
@@ -82,7 +98,7 @@ export default class GameplayScript extends ScriptNode {
 		);
 
 		// set velocity
-		star.body.velocity.y = -Phaser.Math.Between(50, 250);
+		star.body.velocity.y = -Phaser.Math.Between(this._baseGravity, this._baseGravity + 200);
 		star.body.angularVelocity = star.body.velocity.y / 2 * (Math.random() < 0.5 ? -1 : 1);
 
 		// listen pointer
@@ -92,8 +108,8 @@ export default class GameplayScript extends ScriptNode {
 		scene.add.existing(star);
 
 		// program the next spawn event
-		this._spawnEvent = scene.time.addEvent({
-			delay: Phaser.Math.Between(100, 2000),
+		this._spawnStarEvent = scene.time.addEvent({
+			delay: Phaser.Math.Between(100, this._maxSpawnDelay),
 			callback: this.spawnStar,
 			callbackScope: this
 		});
