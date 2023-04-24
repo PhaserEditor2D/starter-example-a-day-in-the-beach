@@ -2,6 +2,7 @@
     "id": "21772a11-2523-4f69-bfc7-39f4f767f3c5",
     "sceneType": "PREFAB",
     "settings": {
+        "snapEnabled": true,
         "exportClass": true,
         "autoImport": true,
         "preloadMethodName": "",
@@ -20,8 +21,54 @@
             "texture": {
                 "key": "star-orange"
             },
-            "x": 279,
-            "y": 94
+            "x": 464,
+            "y": 192,
+            "list": [
+                {
+                    "type": "ScriptNode",
+                    "id": "e1bad492-9903-4583-b7a4-08636afaa50e",
+                    "label": "textures",
+                    "components": [],
+                    "list": [
+                        {
+                            "prefabId": "d220abfa-d1cb-4c05-9ac3-e95aa746651b",
+                            "id": "f9043a3a-dd4a-46c9-b880-21c895ce07cd",
+                            "unlock": [
+                                "texture"
+                            ],
+                            "label": "greenTexInfo",
+                            "texture": "{\"key\":\"star-green\"}",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        },
+                        {
+                            "prefabId": "d220abfa-d1cb-4c05-9ac3-e95aa746651b",
+                            "id": "090b465e-c1b6-4eb0-9d4c-476e4820283c",
+                            "unlock": [
+                                "texture"
+                            ],
+                            "label": "orangeTexInfo",
+                            "texture": "{\"key\":\"star-orange\"}",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        },
+                        {
+                            "prefabId": "d220abfa-d1cb-4c05-9ac3-e95aa746651b",
+                            "id": "bce83f90-21f7-4df2-81ca-6850b1655106",
+                            "unlock": [
+                                "texture"
+                            ],
+                            "label": "yellowTexInfo",
+                            "texture": "{\"key\":\"star-yellow\"}",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "plainObjects": [],
@@ -29,6 +76,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 2
+        "version": 3
     }
 }

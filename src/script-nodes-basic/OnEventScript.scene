@@ -37,6 +37,35 @@
             "type": {
                 "id": "string"
             }
+        },
+        {
+            "name": "eventsSource",
+            "label": "Events Source",
+            "tooltip": "The source of the events (EventEmitter).",
+            "defValue": "gameObject",
+            "customDefinition": false,
+            "type": {
+                "id": "option",
+                "options": [
+                    "game.events",
+                    "scene.events",
+                    "scene.loader",
+                    "scene.input",
+                    "scene.input.keyboard",
+                    "scene.anims",
+                    "gameObject"
+                ]
+            }
+        },
+        {
+            "name": "once",
+            "label": "Once",
+            "tooltip": "Listens once?",
+            "defValue": false,
+            "customDefinition": false,
+            "type": {
+                "id": "boolean"
+            }
         }
     ]
 }

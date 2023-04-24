@@ -121,7 +121,7 @@
                                     "unlock": [
                                         "sceneKey"
                                     ],
-                                    "label": "startSceneActionScript",
+                                    "label": "startGameAction",
                                     "sceneKey": "Level",
                                     "components": [],
                                     "nestedPrefabs": [],
@@ -368,46 +368,6 @@
             ]
         },
         {
-            "type": "Text",
-            "id": "e67be255-3d5a-4db6-9d69-55fa7cce2d5f",
-            "label": "linkToPhaserEditor",
-            "components": [],
-            "x": 40,
-            "y": 40,
-            "text": "Visit Phaser Editor 2D",
-            "paddingLeft": 5,
-            "paddingTop": 5,
-            "paddingRight": 5,
-            "paddingBottom": 5,
-            "fontSize": "18px",
-            "fontStyle": "bold",
-            "color": "#6e5012ff",
-            "backgroundColor": "#c4fe8aff",
-            "list": [
-                {
-                    "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
-                    "id": "6a1373d2-4b1f-4f1d-8756-c896aa260b8f",
-                    "label": "onPointerDownScript_1",
-                    "components": [],
-                    "nestedPrefabs": [],
-                    "list": [
-                        {
-                            "prefabId": "343cd187-34b1-4df7-9aec-75fdad2977ba",
-                            "id": "2860a885-9ac7-45ff-bb5d-e40c85bf64ef",
-                            "unlock": [
-                                "url"
-                            ],
-                            "label": "openURLActionScript_1",
-                            "url": "https://phasereditor2d.com",
-                            "components": [],
-                            "nestedPrefabs": [],
-                            "list": []
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "type": "BitmapText",
             "id": "fd1bd600-a05b-4e11-aeee-5ddda671b5ef",
             "label": "bitmaptext",
@@ -428,6 +388,60 @@
                     ],
                     "label": "floatingObjectScript",
                     "offset": 10,
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": []
+                }
+            ]
+        },
+        {
+            "prefabId": "437c7d1d-12e5-4251-8d72-3ee5abae49d2",
+            "id": "44e30cd3-7f6f-4d59-9a5d-a5931505e54e",
+            "unlock": [
+                "eventName",
+                "eventsSource"
+            ],
+            "label": "onKeydown_SPACE",
+            "eventName": "keydown-SPACE",
+            "eventsSource": "scene.input.keyboard",
+            "components": [],
+            "nestedPrefabs": [],
+            "list": [
+                {
+                    "prefabId": "00708fed-6db6-443f-aa52-29c655f684ed",
+                    "id": "910b2a2c-1c1a-44f9-8422-5704a11760fa",
+                    "unlock": [
+                        "targetAction"
+                    ],
+                    "label": "startGame_2",
+                    "targetAction": "startGameAction",
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": []
+                }
+            ]
+        },
+        {
+            "prefabId": "437c7d1d-12e5-4251-8d72-3ee5abae49d2",
+            "id": "bace46e9-4524-4ce8-a323-ab9aa893d2e0",
+            "unlock": [
+                "eventName",
+                "eventsSource"
+            ],
+            "label": "onKeydown_ENTER",
+            "eventName": "keydown-ENTER",
+            "eventsSource": "scene.input.keyboard",
+            "components": [],
+            "nestedPrefabs": [],
+            "list": [
+                {
+                    "prefabId": "00708fed-6db6-443f-aa52-29c655f684ed",
+                    "id": "7ef3f486-70fd-4343-886d-a552f375a2e2",
+                    "unlock": [
+                        "targetAction"
+                    ],
+                    "label": "startGame_1",
+                    "targetAction": "startGameAction",
                     "components": [],
                     "nestedPrefabs": [],
                     "list": []

@@ -3,6 +3,8 @@ import { GameSounds } from "../GameSounds";
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
+import ScriptNode from "../script-nodes-basic/ScriptNode";
+import TextureInfoScript from "../script-nodes/TextureInfoScript";
 /* START-USER-IMPORTS */
 import Level from "../scenes/Level";
 /* END-USER-IMPORTS */
@@ -10,20 +12,38 @@ import Level from "../scenes/Level";
 export default class Star extends Phaser.GameObjects.Image {
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
-		super(scene, x ?? 279, y ?? 94, texture || "star-orange", frame);
+		super(scene, x ?? 464, y ?? 192, texture || "star-orange", frame);
+
+		// textures
+		const textures = new ScriptNode(this);
+
+		// greenTexInfo
+		const greenTexInfo = new TextureInfoScript(textures);
+
+		// orangeTexInfo
+		const orangeTexInfo = new TextureInfoScript(textures);
+
+		// yellowTexInfo
+		const yellowTexInfo = new TextureInfoScript(textures);
+
+		// greenTexInfo (prefab fields)
+		greenTexInfo.texture = {"key":"star-green"};
+
+		// orangeTexInfo (prefab fields)
+		orangeTexInfo.texture = {"key":"star-orange"};
+
+		// yellowTexInfo (prefab fields)
+		yellowTexInfo.texture = {"key":"star-yellow"};
 
 		/* START-USER-CTR-CODE */
-
-		this.scene.events.on(Phaser.Scenes.Events.UPDATE, this.updatePrefab, this);
 
 		this.verticalSpeed = Phaser.Math.Between(2, 5);
 		this.angleSpeed = this.verticalSpeed * (Math.random() < 0.5 ? -1 : 1);
 
-		this.setTexture(["star-orange", "star-green", "star-yellow"][Phaser.Math.Between(0, 2)]);
+		const texInfo = Phaser.Utils.Array.GetRandom(textures.children) as TextureInfoScript;	
+		this.setTexture(texInfo.texture.key, texInfo.texture.frame);
 
 		this.setInteractive();
-
-		this.on("pointerdown", this.hitted, this);
 
 		/* END-USER-CTR-CODE */
 	}
@@ -32,44 +52,16 @@ export default class Star extends Phaser.GameObjects.Image {
 
 	private verticalSpeed: number;
 	private angleSpeed: number;
-	private taken = false;
 
-
-	updatePrefab() {
-
-		if (this.taken) {
-
-			return;
-		}
-
-		const level = this.scene as Level;
-
-		if (level.paused) {
-
-			return;
-		}
+	updateStar() {
 
 		this.y -= this.verticalSpeed;
 		this.angle += this.angleSpeed;
-
-		if (this.y < -200) {
-
-			this.destroy();
-		}
 	}
 
 	hitted() {
 
 		const scene = this.scene as Level;
-
-		if (scene.paused || this.taken) {
-
-			return;
-		}
-
-		GameSounds.playBubble();
-
-		this.taken = true;
 
 		scene.add.tween({
 			targets: this,
@@ -79,19 +71,9 @@ export default class Star extends Phaser.GameObjects.Image {
 				alpha: 0
 			},
 			duration: 250,
-			onComplete: this.destroy,
+			onComplete: () => this.destroy(),
 			onCompleteScope: this
 		});
-	}
-
-	destroy() {
-
-		if (this.scene) {
-
-			this.scene.events.off(Phaser.Scenes.Events.UPDATE, this.updatePrefab, this);
-		}
-
-		super.destroy();
 	}
 
 	/* END-USER-CODE */

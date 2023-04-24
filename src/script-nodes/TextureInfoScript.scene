@@ -1,0 +1,42 @@
+{
+    "id": "d220abfa-d1cb-4c05-9ac3-e95aa746651b",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1920,
+        "borderHeight": 1080
+    },
+    "displayList": [
+        {
+            "type": "ScriptNode",
+            "id": "e25924e9-d948-487d-8f3d-55d594ef30e5",
+            "label": "scriptnode_1",
+            "components": [],
+            "list": []
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    },
+    "prefabProperties": [
+        {
+            "name": "texture",
+            "label": "Texture",
+            "tooltip": "The texture info",
+            "defValue": "",
+            "customDefinition": false,
+            "type": {
+                "id": "texture-config"
+            }
+        }
+    ]
+}

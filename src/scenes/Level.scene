@@ -215,6 +215,150 @@
                     "list": []
                 }
             ]
+        },
+        {
+            "type": "Container",
+            "id": "6eda85a9-7b6a-4405-93a3-20d1119ce406",
+            "label": "startsIcon",
+            "components": [],
+            "x": 91,
+            "y": 72,
+            "scaleX": 0.5591245841155765,
+            "scaleY": 0.5591245841155765,
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "dfd04d86-d439-43f8-b665-54413a9dd7a1",
+                    "label": "star_yellow",
+                    "components": [],
+                    "texture": {
+                        "key": "star-yellow"
+                    },
+                    "x": -15,
+                    "y": -9,
+                    "list": [
+                        {
+                            "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                            "id": "2b84ff7d-e384-4968-bfff-fe0eaf8818e1",
+                            "unlock": [
+                                "offset"
+                            ],
+                            "label": "floatingObjectScript_4",
+                            "offset": 10,
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "id": "c7489fc2-4cee-4017-a10c-95c670bb8b17",
+                    "label": "star_orange",
+                    "components": [],
+                    "texture": {
+                        "key": "star-orange"
+                    },
+                    "x": 2,
+                    "y": 34,
+                    "list": [
+                        {
+                            "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                            "id": "cf483580-cc5e-4fee-9d17-bc7e2f197dab",
+                            "unlock": [
+                                "offset"
+                            ],
+                            "label": "floatingObjectScript_3",
+                            "offset": 5,
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "id": "b27148ad-5d07-40c3-83ca-af733989f2a0",
+                    "label": "star_green",
+                    "components": [],
+                    "texture": {
+                        "key": "star-green"
+                    },
+                    "x": 27,
+                    "scaleX": 0.7725992149498591,
+                    "scaleY": 0.7725992149498591,
+                    "list": [
+                        {
+                            "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                            "id": "8eed7a24-861d-49f6-8dd1-16e66282c85f",
+                            "unlock": [
+                                "offset"
+                            ],
+                            "label": "floatingObjectScript_2",
+                            "offset": 15,
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "BitmapText",
+            "id": "a9807077-5d88-4e8e-8d5c-90b30fe43708",
+            "label": "pointsCounter",
+            "components": [],
+            "x": 165,
+            "y": 13,
+            "text": "0",
+            "font": "hyperdrive",
+            "fontSize": 100,
+            "list": [
+                {
+                    "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                    "id": "25522020-32a4-4ab7-acf8-3d2e6106fd1d",
+                    "unlock": [
+                        "offset"
+                    ],
+                    "label": "floatingObjectScript_5",
+                    "offset": 5,
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": []
+                },
+                {
+                    "prefabId": "437c7d1d-12e5-4251-8d72-3ee5abae49d2",
+                    "id": "d4d3020b-1ebb-4174-9e52-4af793e65833",
+                    "unlock": [
+                        "eventName",
+                        "eventsSource"
+                    ],
+                    "label": "onUpdatePoints",
+                    "eventName": "update-points",
+                    "eventsSource": "scene.events",
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": [
+                        {
+                            "prefabId": "bfbbe5ee-7aa2-4f38-9b31-777c6df483d3",
+                            "id": "ee356eed-8a7d-4859-a973-bd7fe8b6e704",
+                            "label": "updatePointsAction",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "prefabId": "d8801a27-29ff-4774-a8a6-1f4e9b14d6cc",
+            "id": "789d2f54-a153-406e-a5e6-cf5e700681e3",
+            "label": "gameplayScript",
+            "components": [],
+            "nestedPrefabs": [],
+            "list": []
         }
     ],
     "plainObjects": [],

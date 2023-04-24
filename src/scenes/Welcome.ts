@@ -9,8 +9,9 @@ import StartSceneActionScript from "../script-nodes-basic/StartSceneActionScript
 import OnPointerDownOpenURLScript from "../script-nodes/OnPointerDownOpenURLScript";
 import SwitchImageActionScript from "../script-nodes/SwitchImageActionScript";
 import CallbackActionScript from "../script-nodes-basic/CallbackActionScript";
-import OpenURLActionScript from "../script-nodes/OpenURLActionScript";
 import FloatingObjectScript from "../script-nodes/FloatingObjectScript";
+import OnEventScript from "../script-nodes-basic/OnEventScript";
+import ExecActionScript from "../script-nodes-basic/ExecActionScript";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -61,8 +62,8 @@ export default class Welcome extends Phaser.Scene {
 		// pushActionScript
 		const pushActionScript = new PushActionScript(onPointerDownScript);
 
-		// startSceneActionScript
-		const startSceneActionScript = new StartSceneActionScript(pushActionScript);
+		// startGameAction
+		const startGameAction = new StartSceneActionScript(pushActionScript);
 
 		// facebookBtn
 		const facebookBtn = this.add.image(160, 920, "buttons", "Button Pack - Green_Button Green - Facebook.png");
@@ -106,18 +107,6 @@ export default class Welcome extends Phaser.Scene {
 		// toggleEffectsAction
 		const toggleEffectsAction = new CallbackActionScript(onPointerDownScript_2);
 
-		// linkToPhaserEditor
-		const linkToPhaserEditor = this.add.text(40, 40, "", {});
-		linkToPhaserEditor.text = "Visit Phaser Editor 2D";
-		linkToPhaserEditor.setStyle({ "backgroundColor": "#c4fe8aff", "color": "#6e5012ff", "fontSize": "18px", "fontStyle": "bold" });
-		linkToPhaserEditor.setPadding({"left":5,"top":5,"right":5,"bottom":5});
-
-		// onPointerDownScript_1
-		const onPointerDownScript_1 = new OnPointerDownScript(linkToPhaserEditor);
-
-		// openURLActionScript_1
-		const openURLActionScript_1 = new OpenURLActionScript(onPointerDownScript_1);
-
 		// bitmaptext
 		const bitmaptext = this.add.bitmapText(960, 120, "hyperdrive", "a day in\nthe beach");
 		bitmaptext.setOrigin(0.5, 0);
@@ -128,8 +117,20 @@ export default class Welcome extends Phaser.Scene {
 		// floatingObjectScript
 		const floatingObjectScript = new FloatingObjectScript(bitmaptext);
 
-		// startSceneActionScript (prefab fields)
-		startSceneActionScript.sceneKey = "Level";
+		// onKeydown_SPACE
+		const onKeydown_SPACE = new OnEventScript(this);
+
+		// startGame_2
+		const startGame_2 = new ExecActionScript(onKeydown_SPACE);
+
+		// onKeydown_ENTER
+		const onKeydown_ENTER = new OnEventScript(this);
+
+		// startGame_1
+		const startGame_1 = new ExecActionScript(onKeydown_ENTER);
+
+		// startGameAction (prefab fields)
+		startGameAction.sceneKey = "Level";
 
 		// onPointerDownOpenURLScript.openURLActionScript (prefab fields)
 		onPointerDownOpenURLScript.openURLActionScript.url = "https://facebook.com/PhaserEditor2D";
@@ -155,11 +156,22 @@ export default class Welcome extends Phaser.Scene {
 		// toggleEffectsAction (prefab fields)
 		toggleEffectsAction.callback = () => GameSounds.toggleEffects();
 
-		// openURLActionScript_1 (prefab fields)
-		openURLActionScript_1.url = "https://phasereditor2d.com";
-
 		// floatingObjectScript (prefab fields)
 		floatingObjectScript.offset = 10;
+
+		// onKeydown_SPACE (prefab fields)
+		onKeydown_SPACE.eventName = "keydown-SPACE";
+		onKeydown_SPACE.eventsSource = "scene.input.keyboard";
+
+		// startGame_2 (prefab fields)
+		startGame_2.targetAction = startGameAction;
+
+		// onKeydown_ENTER (prefab fields)
+		onKeydown_ENTER.eventName = "keydown-ENTER";
+		onKeydown_ENTER.eventsSource = "scene.input.keyboard";
+
+		// startGame_1 (prefab fields)
+		startGame_1.targetAction = startGameAction;
 
 		this.musicSwitchImageAction = musicSwitchImageAction;
 		this.musicBtn = musicBtn;
