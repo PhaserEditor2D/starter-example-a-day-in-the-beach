@@ -17,7 +17,7 @@ export default class FadeInScript extends SpriteScriptNode {
 		/* START-USER-CTR-CODE */
 
 		this.gameObject.alpha = 0;
-		
+
 		/* END-USER-CTR-CODE */
 	}
 

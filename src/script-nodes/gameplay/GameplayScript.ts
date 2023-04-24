@@ -74,7 +74,7 @@ export default class GameplayScript extends ScriptNode {
 
 		this._baseGravity += 50;
 		this._maxSpawnDelay =  Math.max(this._maxSpawnDelay - 100, 0);
-		
+
 		this.scene.time.addEvent({
 			delay: 5000,
 			callback: () => this.nextDifficultyLevel()

@@ -9,7 +9,7 @@ import OnPointerDownStartSceneScript from "../script-nodes/ui/OnPointerDownStart
 import OnPointerDownScript from "../script-nodes-basic/OnPointerDownScript";
 import PushActionScript from "../script-nodes/ui/PushActionScript";
 import SwitchImageActionScript from "../script-nodes/ui/SwitchImageActionScript";
-import CallbackActionScript from "../script-nodes-basic/CallbackActionScript";
+import EmitEventAction from "../script-nodes-basic/EmitEventAction";
 import OnEventScript from "../script-nodes-basic/OnEventScript";
 import UpdateTextAction from "../script-nodes/gameplay/UpdateTextAction";
 /* START-USER-IMPORTS */
@@ -43,8 +43,8 @@ export default class UILayerPrefab extends Phaser.GameObjects.Layer {
 		// pauseSwitchImageAction
 		const pauseSwitchImageAction = new SwitchImageActionScript(pushActionScript);
 
-		// togglePauseAction
-		const togglePauseAction = new CallbackActionScript(pushActionScript);
+		// emitGamePausedEvent
+		const emitGamePausedEvent = new EmitEventAction(pushActionScript);
 
 		// floatingObjectScript
 		const floatingObjectScript = new FloatingObjectScript(pauseBtn);
@@ -110,8 +110,9 @@ export default class UILayerPrefab extends Phaser.GameObjects.Layer {
 		pauseSwitchImageAction.offTexture = {"key":"buttons","frame":"Button Pack - Green_Button Green - Play.png"};
 		pauseSwitchImageAction.isOn = true;
 
-		// togglePauseAction (prefab fields)
-		togglePauseAction.callback = () => this.events.emit("game-paused");
+		// emitGamePausedEvent (prefab fields)
+		emitGamePausedEvent.eventName = "game-paused";
+		emitGamePausedEvent.eventEmitter = "scene.events";
 
 		// floatingObjectScript (prefab fields)
 		floatingObjectScript.offset = 5;
@@ -130,7 +131,7 @@ export default class UILayerPrefab extends Phaser.GameObjects.Layer {
 
 		// onUpdatePoints (prefab fields)
 		onUpdatePoints.eventName = "update-points";
-		onUpdatePoints.eventsSource = "scene.events";
+		onUpdatePoints.eventEmitter = "scene.events";
 
 		/* START-USER-CTR-CODE */
 		/* END-USER-CTR-CODE */

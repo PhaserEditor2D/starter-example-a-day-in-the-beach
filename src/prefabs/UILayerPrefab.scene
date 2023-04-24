@@ -133,15 +133,15 @@
                                             "list": []
                                         },
                                         {
-                                            "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
-                                            "id": "2fd19f09-e1bb-4b2a-90ec-84d3f2afc5c8",
+                                            "prefabId": "757fdd95-b5cc-4c5b-adef-a26b5965d851",
+                                            "id": "c4ab7aa5-a7fc-4591-8438-1d7b1a750960",
                                             "unlock": [
-                                                "callback",
-                                                "x",
-                                                "y"
+                                                "eventName",
+                                                "eventEmitter"
                                             ],
-                                            "label": "togglePauseAction",
-                                            "callback": "() => this.events.emit(\"game-paused\")",
+                                            "label": "emitGamePausedEvent",
+                                            "eventName": "game-paused",
+                                            "eventEmitter": "scene.events",
                                             "components": [],
                                             "nestedPrefabs": [],
                                             "list": []
@@ -297,13 +297,13 @@
                             "id": "d4d3020b-1ebb-4174-9e52-4af793e65833",
                             "unlock": [
                                 "eventName",
-                                "eventsSource",
+                                "eventEmitter",
                                 "x",
                                 "y"
                             ],
                             "label": "onUpdatePoints",
                             "eventName": "update-points",
-                            "eventsSource": "scene.events",
+                            "eventEmitter": "scene.events",
                             "components": [],
                             "nestedPrefabs": [],
                             "list": [

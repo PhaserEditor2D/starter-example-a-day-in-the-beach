@@ -399,11 +399,11 @@
             "id": "44e30cd3-7f6f-4d59-9a5d-a5931505e54e",
             "unlock": [
                 "eventName",
-                "eventsSource"
+                "eventEmitter"
             ],
             "label": "onKeydown_SPACE",
             "eventName": "keydown-SPACE",
-            "eventsSource": "scene.input.keyboard",
+            "eventEmitter": "scene.input.keyboard",
             "components": [],
             "nestedPrefabs": [],
             "list": [
@@ -426,11 +426,11 @@
             "id": "bace46e9-4524-4ce8-a323-ab9aa893d2e0",
             "unlock": [
                 "eventName",
-                "eventsSource"
+                "eventEmitter"
             ],
             "label": "onKeydown_ENTER",
             "eventName": "keydown-ENTER",
-            "eventsSource": "scene.input.keyboard",
+            "eventEmitter": "scene.input.keyboard",
             "components": [],
             "nestedPrefabs": [],
             "list": [
