@@ -23,6 +23,10 @@
             },
             "x": 464,
             "y": 192,
+            "ArcadeComponent.active": true,
+            "angularVelocity": 100,
+            "body.width": 143,
+            "body.height": 146,
             "list": [
                 {
                     "type": "ScriptNode",

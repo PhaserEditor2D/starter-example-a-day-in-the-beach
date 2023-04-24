@@ -9,10 +9,19 @@ import TextureInfoScript from "../script-nodes/TextureInfoScript";
 import Level from "../scenes/Level";
 /* END-USER-IMPORTS */
 
+export default interface Star {
+
+	 body: Phaser.Physics.Arcade.Body;
+}
+
 export default class Star extends Phaser.GameObjects.Image {
 
 	constructor(scene: Phaser.Scene, x?: number, y?: number, texture?: string, frame?: number | string) {
 		super(scene, x ?? 464, y ?? 192, texture || "star-orange", frame);
+
+		scene.physics.add.existing(this, false);
+		this.body.angularVelocity = 100;
+		this.body.setSize(143, 146, false);
 
 		// textures
 		const textures = new ScriptNode(this);
@@ -37,9 +46,6 @@ export default class Star extends Phaser.GameObjects.Image {
 
 		/* START-USER-CTR-CODE */
 
-		this.verticalSpeed = Phaser.Math.Between(2, 5);
-		this.angleSpeed = this.verticalSpeed * (Math.random() < 0.5 ? -1 : 1);
-
 		const texInfo = Phaser.Utils.Array.GetRandom(textures.children) as TextureInfoScript;	
 		this.setTexture(texInfo.texture.key, texInfo.texture.frame);
 
@@ -49,15 +55,6 @@ export default class Star extends Phaser.GameObjects.Image {
 	}
 
 	/* START-USER-CODE */
-
-	private verticalSpeed: number;
-	private angleSpeed: number;
-
-	updateStar() {
-
-		this.y -= this.verticalSpeed;
-		this.angle += this.angleSpeed;
-	}
 
 	hitted() {
 

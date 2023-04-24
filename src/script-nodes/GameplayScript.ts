@@ -25,7 +25,6 @@ export default class GameplayScript extends ScriptNode {
 	private _paused = false;
 	private _points = 0;
 	private _stars: Star[] = [];
-	private _starId = 0;
 
 	protected override awake(): void {
 
@@ -38,11 +37,24 @@ export default class GameplayScript extends ScriptNode {
 
 		if (!this._paused) {
 
-			const star = new Star(scene, Phaser.Math.Between(200, 1700), 1200);
-			star.name = "star-" + this._starId;
-			this._starId++;
+			const star = new Star(scene);
+			
+			const {width, height} = this.scene.scale;
+			const margin = 50;
+			const minX = star.width / 2 + margin;
+			const maxX = width - star.width / 2 - margin;
+			const y = height + star.height / 2;
+
+			star.x = Phaser.Math.Between(minX, maxX);
+			star.y = y;
+
+			star.body.velocity.y = -Phaser.Math.Between(50, 250);
+			star.body.angularVelocity = star.body.velocity.y / 2 * (Math.random() < 0.5? -1 : 1);
+
 			scene.add.existing(star);
+
 			star.once("pointerdown", () => this.pickStar(star), this);
+			
 			this._stars.push(star);
 		}
 
@@ -67,7 +79,7 @@ export default class GameplayScript extends ScriptNode {
 
 		for (const star of this._stars) {
 
-			if (star.y - star.displayHeight / 2 < 0) {
+			if (star.y + star.displayHeight / 2 < 0) {
 
 				star.destroy();
 
@@ -77,9 +89,6 @@ export default class GameplayScript extends ScriptNode {
 
 				this.scene.events.emit("update-points", this._points);
 
-			} else {
-
-				star.updateStar();
 			}
 		}
 	}
