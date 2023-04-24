@@ -8,7 +8,7 @@ import Phaser from "phaser";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-export default class EmitEventActionScriptScript extends ScriptNode {
+export default class EmitEventActionScript extends ScriptNode {
 
 	constructor(parent: ScriptNode | Phaser.GameObjects.GameObject | Phaser.Scene) {
 		super(parent);
@@ -24,7 +24,7 @@ export default class EmitEventActionScriptScript extends ScriptNode {
 	/* START-USER-CODE */
 
 	execute(args?: any): void {
-		
+
 		let emitter: Phaser.Events.EventEmitter | null | undefined;
 
 		switch (this.eventEmitter) {

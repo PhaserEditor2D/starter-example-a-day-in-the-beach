@@ -9,7 +9,7 @@ import OnPointerDownStartSceneScript from "../script-nodes/ui/OnPointerDownStart
 import OnPointerDownScript from "../script-nodes-basic/OnPointerDownScript";
 import PushActionScript from "../script-nodes/ui/PushActionScript";
 import SwitchImageActionScript from "../script-nodes/ui/SwitchImageActionScript";
-import EmitEventAction from "../script-nodes-basic/EmitEventAction";
+import EmitEventActionScript from "../script-nodes-basic/EmitEventActionScript";
 import OnEventScript from "../script-nodes-basic/OnEventScript";
 import UpdateTextAction from "../script-nodes/gameplay/UpdateTextAction";
 /* START-USER-IMPORTS */
@@ -44,7 +44,7 @@ export default class UILayerPrefab extends Phaser.GameObjects.Layer {
 		const pauseSwitchImageAction = new SwitchImageActionScript(pushActionScript);
 
 		// emitGamePausedEvent
-		const emitGamePausedEvent = new EmitEventAction(pushActionScript);
+		const emitGamePausedEvent = new EmitEventActionScript(pushActionScript);
 
 		// floatingObjectScript
 		const floatingObjectScript = new FloatingObjectScript(pauseBtn);
