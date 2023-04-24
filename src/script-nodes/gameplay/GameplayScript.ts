@@ -9,6 +9,7 @@ import Phaser from "phaser";
 import Star from "../../prefabs/Star";
 import { GameSounds } from "../../GameSounds";
 import TextureInfoScript from "./TextureInfoScript";
+import GameoverPrefab from "../../prefabs/GameoverPrefab";
 /* END-USER-IMPORTS */
 
 export default class GameplayScript extends ScriptNode {
@@ -39,6 +40,7 @@ export default class GameplayScript extends ScriptNode {
 	private _baseGravity = 50;
 	private _maxSpawnDelay = 2000;
 	private _points = 0;
+	private _gameOver = false;
 
 	private togglePause() {
 
@@ -65,6 +67,11 @@ export default class GameplayScript extends ScriptNode {
 
 	private nextDifficultyLevel() {
 
+		if (this._gameOver) {
+
+			return;
+		}
+
 		this._baseGravity += 50;
 		this._maxSpawnDelay =  Math.max(this._maxSpawnDelay - 100, 0);
 		
@@ -75,6 +82,11 @@ export default class GameplayScript extends ScriptNode {
 	}
 
 	private spawnStar() {
+
+		if (this._gameOver) {
+
+			return;
+		}
 
 		const scene = this.scene;
 
@@ -123,7 +135,7 @@ export default class GameplayScript extends ScriptNode {
 
 	protected override update(): void {
 
-		if (this.isPaused()) {
+		if (this.isPaused() || this._gameOver) {
 
 			return;
 		}
@@ -135,14 +147,30 @@ export default class GameplayScript extends ScriptNode {
 				this.killStar(star);
 
 				this._points--;
-				this.scene.events.emit("update-points", this._points);
+
+				if (this._points < 0) {
+
+					this._gameOver = true;
+
+					this.showGameOverMessage();
+
+				} else {
+
+					this.scene.events.emit("update-points", this._points);
+				}
 			}
 		}
 	}
 
+	private showGameOverMessage() {
+
+		const msg = new GameoverPrefab(this.scene);
+		this.scene.add.existing(msg);
+	}
+
 	private pickStar(star: Star) {
 
-		if (this.isPaused()) {
+		if (this.isPaused() || this._gameOver) {
 
 			return;
 		}
