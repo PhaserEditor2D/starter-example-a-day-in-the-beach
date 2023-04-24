@@ -9,9 +9,11 @@ import OnPointerDownStartSceneScript from "../script-nodes/ui/OnPointerDownStart
 import OnPointerDownScript from "../script-nodes-basic/OnPointerDownScript";
 import PushActionScript from "../script-nodes/ui/PushActionScript";
 import SwitchImageActionScript from "../script-nodes/ui/SwitchImageActionScript";
+import CallbackActionScript from "../script-nodes-basic/CallbackActionScript";
 import OnEventScript from "../script-nodes-basic/OnEventScript";
 import UpdateTextAction from "../script-nodes/gameplay/UpdateTextAction";
 import GameplayScript from "../script-nodes/gameplay/GameplayScript";
+import TextureInfoScript from "../script-nodes/gameplay/TextureInfoScript";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -78,6 +80,9 @@ export default class Level extends Phaser.Scene {
 		// pauseSwitchImageAction
 		const pauseSwitchImageAction = new SwitchImageActionScript(pushActionScript);
 
+		// togglePauseAction
+		const togglePauseAction = new CallbackActionScript(pushActionScript);
+
 		// floatingObjectScript
 		const floatingObjectScript = new FloatingObjectScript(pauseBtn);
 
@@ -124,7 +129,16 @@ export default class Level extends Phaser.Scene {
 		new UpdateTextAction(onUpdatePoints);
 
 		// gameplayScript
-		new GameplayScript(this);
+		const gameplayScript = new GameplayScript(this);
+
+		// yellow
+		const yellow = new TextureInfoScript(gameplayScript.textures);
+
+		// orange
+		const orange = new TextureInfoScript(gameplayScript.textures);
+
+		// green
+		const green = new TextureInfoScript(gameplayScript.textures);
 
 		// floatingObjectScript_1 (prefab fields)
 		floatingObjectScript_1.offset = 5;
@@ -136,6 +150,9 @@ export default class Level extends Phaser.Scene {
 		pauseSwitchImageAction.onTexture = {"key":"buttons","frame":"Button Pack - Green_Button Green - Pause.png"};
 		pauseSwitchImageAction.offTexture = {"key":"buttons","frame":"Button Pack - Green_Button Green - Play.png"};
 		pauseSwitchImageAction.isOn = true;
+
+		// togglePauseAction (prefab fields)
+		togglePauseAction.callback = () => this.events.emit("game-paused");
 
 		// floatingObjectScript (prefab fields)
 		floatingObjectScript.offset = 5;
@@ -155,6 +172,15 @@ export default class Level extends Phaser.Scene {
 		// onUpdatePoints (prefab fields)
 		onUpdatePoints.eventName = "update-points";
 		onUpdatePoints.eventsSource = "scene.events";
+
+		// yellow (prefab fields)
+		yellow.texture = {"key":"star-yellow"};
+
+		// orange (prefab fields)
+		orange.texture = {"key":"star-orange"};
+
+		// green (prefab fields)
+		green.texture = {"key":"star-green"};
 
 		this.pauseSwitchImageAction = pauseSwitchImageAction;
 		this.pauseBtn = pauseBtn;

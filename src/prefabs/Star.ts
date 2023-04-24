@@ -1,10 +1,6 @@
-import { GameSounds } from "../GameSounds";
-
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
-import ScriptNode from "../script-nodes-basic/ScriptNode";
-import TextureInfoScript from "../script-nodes/gameplay/TextureInfoScript";
 /* START-USER-IMPORTS */
 import Level from "../scenes/Level";
 /* END-USER-IMPORTS */
@@ -23,31 +19,7 @@ export default class Star extends Phaser.GameObjects.Image {
 		this.body.angularVelocity = 100;
 		this.body.setSize(143, 146, false);
 
-		// textures
-		const textures = new ScriptNode(this);
-
-		// greenTexInfo
-		const greenTexInfo = new TextureInfoScript(textures);
-
-		// orangeTexInfo
-		const orangeTexInfo = new TextureInfoScript(textures);
-
-		// yellowTexInfo
-		const yellowTexInfo = new TextureInfoScript(textures);
-
-		// greenTexInfo (prefab fields)
-		greenTexInfo.texture = {"key":"star-green"};
-
-		// orangeTexInfo (prefab fields)
-		orangeTexInfo.texture = {"key":"star-orange"};
-
-		// yellowTexInfo (prefab fields)
-		yellowTexInfo.texture = {"key":"star-yellow"};
-
 		/* START-USER-CTR-CODE */
-
-		const texInfo = Phaser.Utils.Array.GetRandom(textures.children) as TextureInfoScript;	
-		this.setTexture(texInfo.texture.key, texInfo.texture.frame);
 
 		this.setInteractive();
 
@@ -56,7 +28,7 @@ export default class Star extends Phaser.GameObjects.Image {
 
 	/* START-USER-CODE */
 
-	hitted() {
+	animatePickStar(callback: () => void) {
 
 		const scene = this.scene as Level;
 
@@ -68,7 +40,7 @@ export default class Star extends Phaser.GameObjects.Image {
 				alpha: 0
 			},
 			duration: 250,
-			onComplete: () => this.destroy(),
+			onComplete: () => callback(),
 			onCompleteScope: this
 		});
 	}

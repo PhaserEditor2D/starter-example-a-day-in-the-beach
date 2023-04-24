@@ -197,6 +197,18 @@
                                     "components": [],
                                     "nestedPrefabs": [],
                                     "list": []
+                                },
+                                {
+                                    "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
+                                    "id": "2fd19f09-e1bb-4b2a-90ec-84d3f2afc5c8",
+                                    "unlock": [
+                                        "callback"
+                                    ],
+                                    "label": "togglePauseAction",
+                                    "callback": "() => this.events.emit(\"game-paused\")",
+                                    "components": [],
+                                    "nestedPrefabs": [],
+                                    "list": []
                                 }
                             ]
                         }
@@ -357,7 +369,53 @@
             "id": "789d2f54-a153-406e-a5e6-cf5e700681e3",
             "label": "gameplayScript",
             "components": [],
-            "nestedPrefabs": [],
+            "nestedPrefabs": [
+                {
+                    "prefabId": "6d1b76e2-9d92-41b8-a055-a3c984f170d9",
+                    "id": "97bff27a-2f63-4ba9-90b9-dbf5b2cb870c",
+                    "label": "textures",
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": [
+                        {
+                            "prefabId": "d220abfa-d1cb-4c05-9ac3-e95aa746651b",
+                            "id": "c876249a-a4e4-4f80-8aa2-944104907523",
+                            "unlock": [
+                                "texture"
+                            ],
+                            "label": "yellow",
+                            "texture": "{\"key\":\"star-yellow\"}",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        },
+                        {
+                            "prefabId": "d220abfa-d1cb-4c05-9ac3-e95aa746651b",
+                            "id": "af1f0b0e-d90e-4c97-b4a5-f81a677d7233",
+                            "unlock": [
+                                "texture"
+                            ],
+                            "label": "orange",
+                            "texture": "{\"key\":\"star-orange\"}",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        },
+                        {
+                            "prefabId": "d220abfa-d1cb-4c05-9ac3-e95aa746651b",
+                            "id": "70000062-e4da-483a-9581-2d845ca86de2",
+                            "unlock": [
+                                "texture"
+                            ],
+                            "label": "green",
+                            "texture": "{\"key\":\"star-green\"}",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                }
+            ],
             "list": []
         }
     ],

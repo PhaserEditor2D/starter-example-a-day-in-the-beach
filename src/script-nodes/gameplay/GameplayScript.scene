@@ -17,7 +17,16 @@
             "id": "8d37735a-4018-4b78-a6cd-4d24bdbe1ced",
             "label": "scriptnode_1",
             "components": [],
-            "list": []
+            "list": [
+                {
+                    "type": "ScriptNode",
+                    "id": "6d1b76e2-9d92-41b8-a055-a3c984f170d9",
+                    "label": "textures",
+                    "scope": "NESTED_PREFAB",
+                    "components": [],
+                    "list": []
+                }
+            ]
         }
     ],
     "plainObjects": [],
