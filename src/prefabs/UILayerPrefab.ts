@@ -81,6 +81,11 @@ export default class UILayerPrefab extends Phaser.GameObjects.Layer {
 		// pointsCounter
 		const pointsCounter = scene.add.bitmapText(206, 79, "hyperdrive", "0");
 		pointsCounter.setOrigin(0.5, 0.5);
+		pointsCounter.tintFill = true;
+		pointsCounter.tintTopLeft = 8504341;
+		pointsCounter.tintTopRight = 8504341;
+		pointsCounter.tintBottomLeft = 14790987;
+		pointsCounter.tintBottomRight = 14790987;
 		pointsCounter.text = "0";
 		pointsCounter.fontSize = 100;
 		this.add(pointsCounter);
