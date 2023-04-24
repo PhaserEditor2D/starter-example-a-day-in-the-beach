@@ -1,0 +1,331 @@
+{
+    "id": "41c20759-6986-420d-b99c-44f4d40b476c",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1920,
+        "borderHeight": 1080
+    },
+    "displayList": [
+        {
+            "type": "Layer",
+            "id": "5069b9a3-d637-4c11-8950-db40c7cb7003",
+            "label": "layer_1",
+            "components": [],
+            "list": [
+                {
+                    "type": "Image",
+                    "id": "0782f913-fbca-46aa-94a1-60861ca0492b",
+                    "label": "homeButton",
+                    "components": [],
+                    "texture": {
+                        "key": "buttons",
+                        "frame": "Button Pack - Green_Button Green - Home.png"
+                    },
+                    "x": 1782,
+                    "y": 116,
+                    "list": [
+                        {
+                            "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                            "id": "3b46c077-b0e3-4b70-9ff6-ade0dd8709b1",
+                            "unlock": [
+                                "offset",
+                                "x",
+                                "y"
+                            ],
+                            "label": "floatingObjectScript_1",
+                            "offset": 5,
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        },
+                        {
+                            "prefabId": "b459741f-ab64-4898-86d3-226bbe080a0b",
+                            "id": "8fff4a58-7929-486d-a850-4ca5d597cd24",
+                            "unlock": [
+                                "x",
+                                "y"
+                            ],
+                            "label": "onPointerDownStartSceneScript",
+                            "components": [],
+                            "nestedPrefabs": [
+                                {
+                                    "prefabId": "2e8f41ae-0af8-4977-8851-9827e5b57383",
+                                    "id": "e14b1782-d524-4d93-9916-ef2b0dd1c49e",
+                                    "label": "pushActionScript",
+                                    "components": [],
+                                    "nestedPrefabs": [
+                                        {
+                                            "prefabId": "35312692-9386-4fdc-80e7-f1b60b30396f",
+                                            "id": "d9ca6933-a48e-4ec7-bb33-df1ac2c19ead",
+                                            "unlock": [
+                                                "sceneKey"
+                                            ],
+                                            "label": "startSceneActionScript",
+                                            "sceneKey": "Welcome",
+                                            "components": [],
+                                            "nestedPrefabs": [],
+                                            "list": []
+                                        }
+                                    ],
+                                    "list": []
+                                }
+                            ],
+                            "list": []
+                        }
+                    ]
+                },
+                {
+                    "type": "Image",
+                    "id": "923a285a-f3ab-4b19-977e-00fcc0ff8222",
+                    "label": "pauseBtn",
+                    "components": [],
+                    "texture": {
+                        "key": "buttons",
+                        "frame": "Button Pack - Green_Button Green - Pause.png"
+                    },
+                    "x": 1596,
+                    "y": 118,
+                    "list": [
+                        {
+                            "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
+                            "id": "34855fbe-a9cc-4851-b916-09d12045d928",
+                            "unlock": [
+                                "x",
+                                "y"
+                            ],
+                            "label": "onPointerDownScript",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": [
+                                {
+                                    "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
+                                    "id": "9c722629-be10-42c6-97b3-9f738eba9f03",
+                                    "unlock": [
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "pushActionScript",
+                                    "components": [],
+                                    "nestedPrefabs": [],
+                                    "list": [
+                                        {
+                                            "prefabId": "b61e7279-4e75-4f73-b26d-4f37ff949c85",
+                                            "id": "2dad0976-fd7e-45ad-a2a9-2d85208ed77d",
+                                            "unlock": [
+                                                "isOn",
+                                                "onTexture",
+                                                "offTexture",
+                                                "x",
+                                                "y"
+                                            ],
+                                            "label": "pauseSwitchImageAction",
+                                            "onTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Green_Button Green - Pause.png\"}",
+                                            "offTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Green_Button Green - Play.png\"}",
+                                            "isOn": true,
+                                            "components": [],
+                                            "nestedPrefabs": [],
+                                            "list": []
+                                        },
+                                        {
+                                            "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
+                                            "id": "2fd19f09-e1bb-4b2a-90ec-84d3f2afc5c8",
+                                            "unlock": [
+                                                "callback",
+                                                "x",
+                                                "y"
+                                            ],
+                                            "label": "togglePauseAction",
+                                            "callback": "() => this.events.emit(\"game-paused\")",
+                                            "components": [],
+                                            "nestedPrefabs": [],
+                                            "list": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                            "id": "44e2aa83-75ec-4013-8748-70ddb849b5a3",
+                            "unlock": [
+                                "offset",
+                                "x",
+                                "y"
+                            ],
+                            "label": "floatingObjectScript",
+                            "offset": 5,
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        }
+                    ]
+                },
+                {
+                    "type": "Container",
+                    "id": "6eda85a9-7b6a-4405-93a3-20d1119ce406",
+                    "label": "startsIcon",
+                    "components": [],
+                    "x": 91,
+                    "y": 72,
+                    "scaleX": 0.5591245841155765,
+                    "scaleY": 0.5591245841155765,
+                    "list": [
+                        {
+                            "type": "Image",
+                            "id": "dfd04d86-d439-43f8-b665-54413a9dd7a1",
+                            "label": "star_yellow",
+                            "components": [],
+                            "texture": {
+                                "key": "star-yellow"
+                            },
+                            "x": -15,
+                            "y": -9,
+                            "list": [
+                                {
+                                    "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                                    "id": "2b84ff7d-e384-4968-bfff-fe0eaf8818e1",
+                                    "unlock": [
+                                        "offset",
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "floatingObjectScript_4",
+                                    "offset": 10,
+                                    "components": [],
+                                    "nestedPrefabs": [],
+                                    "list": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "id": "c7489fc2-4cee-4017-a10c-95c670bb8b17",
+                            "label": "star_orange",
+                            "components": [],
+                            "texture": {
+                                "key": "star-orange"
+                            },
+                            "x": 2,
+                            "y": 34,
+                            "list": [
+                                {
+                                    "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                                    "id": "cf483580-cc5e-4fee-9d17-bc7e2f197dab",
+                                    "unlock": [
+                                        "offset",
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "floatingObjectScript_3",
+                                    "offset": 5,
+                                    "components": [],
+                                    "nestedPrefabs": [],
+                                    "list": []
+                                }
+                            ]
+                        },
+                        {
+                            "type": "Image",
+                            "id": "b27148ad-5d07-40c3-83ca-af733989f2a0",
+                            "label": "star_green",
+                            "components": [],
+                            "texture": {
+                                "key": "star-green"
+                            },
+                            "x": 27,
+                            "scaleX": 0.7725992149498591,
+                            "scaleY": 0.7725992149498591,
+                            "list": [
+                                {
+                                    "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                                    "id": "8eed7a24-861d-49f6-8dd1-16e66282c85f",
+                                    "unlock": [
+                                        "offset",
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "floatingObjectScript_2",
+                                    "offset": 15,
+                                    "components": [],
+                                    "nestedPrefabs": [],
+                                    "list": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "BitmapText",
+                    "id": "a9807077-5d88-4e8e-8d5c-90b30fe43708",
+                    "label": "pointsCounter",
+                    "components": [],
+                    "x": 206,
+                    "y": 79,
+                    "originX": 0.5,
+                    "originY": 0.5,
+                    "text": "0",
+                    "font": "hyperdrive",
+                    "fontSize": 100,
+                    "list": [
+                        {
+                            "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                            "id": "25522020-32a4-4ab7-acf8-3d2e6106fd1d",
+                            "unlock": [
+                                "offset",
+                                "x",
+                                "y"
+                            ],
+                            "label": "floatingObjectScript_5",
+                            "offset": 5,
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": []
+                        },
+                        {
+                            "prefabId": "437c7d1d-12e5-4251-8d72-3ee5abae49d2",
+                            "id": "d4d3020b-1ebb-4174-9e52-4af793e65833",
+                            "unlock": [
+                                "eventName",
+                                "eventsSource",
+                                "x",
+                                "y"
+                            ],
+                            "label": "onUpdatePoints",
+                            "eventName": "update-points",
+                            "eventsSource": "scene.events",
+                            "components": [],
+                            "nestedPrefabs": [],
+                            "list": [
+                                {
+                                    "prefabId": "bfbbe5ee-7aa2-4f38-9b31-777c6df483d3",
+                                    "id": "ee356eed-8a7d-4859-a973-bd7fe8b6e704",
+                                    "unlock": [
+                                        "x",
+                                        "y"
+                                    ],
+                                    "label": "updatePointsAction",
+                                    "components": [],
+                                    "nestedPrefabs": [],
+                                    "list": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    }
+}

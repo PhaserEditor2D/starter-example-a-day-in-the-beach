@@ -22,7 +22,7 @@ export default class GameplayScript extends ScriptNode {
 		this.textures = textures;
 
 		/* START-USER-CTR-CODE */
-		
+
 		this.scene.events.on("game-paused", this.togglePause, this);
 		this.scene.events.on("shutdown", () => this.scene.events.off("game-paused", this.togglePause, this));
 
