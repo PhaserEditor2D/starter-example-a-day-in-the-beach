@@ -67,7 +67,7 @@ export default class ScriptNode {
 
             } else {
 
-                this.scene.events.on(Phaser.Scenes.Events.DESTROY, destroyCallback);
+                this.scene.events.on(Phaser.Scenes.Events.SHUTDOWN, destroyCallback);
             }
         }
     }

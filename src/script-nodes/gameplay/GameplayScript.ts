@@ -24,7 +24,10 @@ export default class GameplayScript extends ScriptNode {
 		/* START-USER-CTR-CODE */
 
 		this.scene.events.on("game-paused", this.togglePause, this);
-		this.scene.events.on("shutdown", () => this.scene.events.off("game-paused", this.togglePause, this));
+		this.scene.events.on(Phaser.Scenes.Events.SHUTDOWN, () => this.scene.events.off("game-paused", this.togglePause, this));
+
+		this.scene.time.paused = false;
+		this.scene.physics.world.isPaused = false;
 
 		/* END-USER-CTR-CODE */
 	}
@@ -132,7 +135,6 @@ export default class GameplayScript extends ScriptNode {
 				this.killStar(star);
 
 				this._points--;
-
 				this.scene.events.emit("update-points", this._points);
 			}
 		}
