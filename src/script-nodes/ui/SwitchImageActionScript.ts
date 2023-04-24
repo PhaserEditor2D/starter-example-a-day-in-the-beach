@@ -3,8 +3,8 @@
 
 /* START OF COMPILED CODE */
 
-import SpriteScriptNode from "../script-nodes-basic/SpriteScriptNode";
-import ScriptNode from "../script-nodes-basic/ScriptNode";
+import SpriteScriptNode from "../../script-nodes-basic/SpriteScriptNode";
+import ScriptNode from "../../script-nodes-basic/ScriptNode";
 import Phaser from "phaser";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */

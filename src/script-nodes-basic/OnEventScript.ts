@@ -18,7 +18,7 @@ export default class OnEventScript extends ScriptNode {
 	}
 
 	public eventName: string = "";
-	public eventsSource: "game.events" | "scene.events" | "scene.loader" | "scene.input" | "scene.input.keyboard" | "scene.anims" | "gameObject" = "gameObject";
+	public eventsSource: "game.events"|"scene.events"|"scene.loader"|"scene.input"|"scene.input.keyboard"|"scene.anims"|"gameObject" = "gameObject";
 	public once: boolean = false;
 
 	/* START-USER-CODE */

@@ -4,12 +4,12 @@ import { GameSounds } from "../GameSounds";
 
 import Phaser from "phaser";
 import OnPointerDownScript from "../script-nodes-basic/OnPointerDownScript";
-import PushActionScript from "../script-nodes/PushActionScript";
+import PushActionScript from "../script-nodes/ui/PushActionScript";
 import StartSceneActionScript from "../script-nodes-basic/StartSceneActionScript";
-import OnPointerDownOpenURLScript from "../script-nodes/OnPointerDownOpenURLScript";
-import SwitchImageActionScript from "../script-nodes/SwitchImageActionScript";
+import OnPointerDownOpenURLScript from "../script-nodes/ui/OnPointerDownOpenURLScript";
+import SwitchImageActionScript from "../script-nodes/ui/SwitchImageActionScript";
 import CallbackActionScript from "../script-nodes-basic/CallbackActionScript";
-import FloatingObjectScript from "../script-nodes/FloatingObjectScript";
+import FloatingObjectScript from "../script-nodes/ui/FloatingObjectScript";
 import OnEventScript from "../script-nodes-basic/OnEventScript";
 import ExecActionScript from "../script-nodes-basic/ExecActionScript";
 /* START-USER-IMPORTS */

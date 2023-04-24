@@ -3,9 +3,9 @@
 
 /* START OF COMPILED CODE */
 
-import ScriptNode from "../script-nodes-basic/ScriptNode";
+import ScriptNode from "../../script-nodes-basic/ScriptNode";
 import Phaser from "phaser";
-import OnPointerDownScript from "../script-nodes-basic/OnPointerDownScript";
+import OnPointerDownScript from "../../script-nodes-basic/OnPointerDownScript";
 import PushActionScript from "./PushActionScript";
 import OpenURLActionScript from "./OpenURLActionScript";
 /* START-USER-IMPORTS */

@@ -4,14 +4,14 @@ import Star from "../prefabs/Star";
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
-import FloatingObjectScript from "../script-nodes/FloatingObjectScript";
-import OnPointerDownStartSceneScript from "../script-nodes/OnPointerDownStartSceneScript";
+import FloatingObjectScript from "../script-nodes/ui/FloatingObjectScript";
+import OnPointerDownStartSceneScript from "../script-nodes/ui/OnPointerDownStartSceneScript";
 import OnPointerDownScript from "../script-nodes-basic/OnPointerDownScript";
-import PushActionScript from "../script-nodes/PushActionScript";
-import SwitchImageActionScript from "../script-nodes/SwitchImageActionScript";
+import PushActionScript from "../script-nodes/ui/PushActionScript";
+import SwitchImageActionScript from "../script-nodes/ui/SwitchImageActionScript";
 import OnEventScript from "../script-nodes-basic/OnEventScript";
-import UpdateTextAction from "../script-nodes/UpdateTextAction";
-import GameplayScript from "../script-nodes/GameplayScript";
+import UpdateTextAction from "../script-nodes/gameplay/UpdateTextAction";
+import GameplayScript from "../script-nodes/gameplay/GameplayScript";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 

@@ -3,11 +3,11 @@
 
 /* START OF COMPILED CODE */
 
-import OnPointerDownScript from "../script-nodes-basic/OnPointerDownScript";
-import ScriptNode from "../script-nodes-basic/ScriptNode";
+import OnPointerDownScript from "../../script-nodes-basic/OnPointerDownScript";
+import ScriptNode from "../../script-nodes-basic/ScriptNode";
 import Phaser from "phaser";
 import PushActionScript from "./PushActionScript";
-import StartSceneActionScript from "../script-nodes-basic/StartSceneActionScript";
+import StartSceneActionScript from "../../script-nodes-basic/StartSceneActionScript";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 

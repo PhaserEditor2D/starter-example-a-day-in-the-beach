@@ -4,7 +4,7 @@ import { GameSounds } from "../GameSounds";
 
 import Phaser from "phaser";
 import ScriptNode from "../script-nodes-basic/ScriptNode";
-import TextureInfoScript from "../script-nodes/TextureInfoScript";
+import TextureInfoScript from "../script-nodes/gameplay/TextureInfoScript";
 /* START-USER-IMPORTS */
 import Level from "../scenes/Level";
 /* END-USER-IMPORTS */

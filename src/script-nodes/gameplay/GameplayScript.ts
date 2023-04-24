@@ -3,11 +3,11 @@
 
 /* START OF COMPILED CODE */
 
-import ScriptNode from "../script-nodes-basic/ScriptNode";
+import ScriptNode from "../../script-nodes-basic/ScriptNode";
 import Phaser from "phaser";
 /* START-USER-IMPORTS */
-import Star from "../prefabs/Star";
-import { GameSounds } from "../GameSounds";
+import Star from "../../prefabs/Star";
+import { GameSounds } from "../../GameSounds";
 /* END-USER-IMPORTS */
 
 export default class GameplayScript extends ScriptNode {
@@ -38,7 +38,7 @@ export default class GameplayScript extends ScriptNode {
 		if (!this._paused) {
 
 			const star = new Star(scene);
-			
+
 			const {width, height} = this.scene.scale;
 			const margin = 50;
 			const minX = star.width / 2 + margin;
@@ -54,7 +54,7 @@ export default class GameplayScript extends ScriptNode {
 			scene.add.existing(star);
 
 			star.once("pointerdown", () => this.pickStar(star), this);
-			
+
 			this._stars.push(star);
 		}
 
@@ -88,7 +88,6 @@ export default class GameplayScript extends ScriptNode {
 				this._points--;
 
 				this.scene.events.emit("update-points", this._points);
-
 			}
 		}
 	}
