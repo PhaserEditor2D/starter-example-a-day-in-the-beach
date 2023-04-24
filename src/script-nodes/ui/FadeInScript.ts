@@ -9,32 +9,37 @@ import Phaser from "phaser";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-export default class FloatingObjectScript extends SpriteScriptNode {
+export default class FadeInScript extends SpriteScriptNode {
 
 	constructor(parent: ScriptNode | Phaser.GameObjects.GameObject | Phaser.Scene) {
 		super(parent);
 
 		/* START-USER-CTR-CODE */
-		// Write your code here.
+
+		this.gameObject.alpha = 0;
+		
 		/* END-USER-CTR-CODE */
 	}
 
-	public offset: number = 20;
+	public duration: number = 1000;
+	public delay: number = 0;
 
 	/* START-USER-CODE */
 
-	protected start() {
+	protected start(): void {
 
-		this.gameObject.scene.add.tween({
+		this.scene.add.tween({
 			targets: this.gameObject,
-			props: {
-				y: "-=" + this.offset,
+			alpha: {
+				from: 0,
+				to: 1
 			},
-			yoyo: true,
-			repeat: -1,
-			duration: Phaser.Math.Between(1000, 1500),
-			delay: Phaser.Math.Between(100, 500)
+			delay: this.delay,
+			duration: this.duration,
+			ease: Phaser.Math.Easing.Quadratic.Out
 		});
+
+		this.gameObject.alpha = 0;
 	}
 
 	/* END-USER-CODE */

@@ -1,0 +1,57 @@
+{
+    "id": "d90814ed-6b9b-48a5-b3ae-48f006ecf4ae",
+    "sceneType": "PREFAB",
+    "settings": {
+        "exportClass": true,
+        "autoImport": true,
+        "preloadMethodName": "",
+        "preloadPackFiles": [],
+        "createMethodName": "",
+        "compilerOutputLanguage": "TYPE_SCRIPT",
+        "borderWidth": 1920,
+        "borderHeight": 1080
+    },
+    "displayList": [
+        {
+            "prefabId": "5e746613-c01a-42aa-8681-4950bb2f23ce",
+            "id": "90c06f0d-9f46-4b1e-847b-8d34fc7d3922",
+            "unlock": [
+                "x",
+                "y"
+            ],
+            "label": "scriptnode_1",
+            "components": [],
+            "nestedPrefabs": [],
+            "list": []
+        }
+    ],
+    "plainObjects": [],
+    "meta": {
+        "app": "Phaser Editor 2D - Scene Editor",
+        "url": "https://phasereditor2d.com",
+        "contentType": "phasereditor2d.core.scene.SceneContentType",
+        "version": 3
+    },
+    "prefabProperties": [
+        {
+            "name": "duration",
+            "label": "Duration",
+            "tooltip": "The duration of the tween.",
+            "defValue": 1000,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        },
+        {
+            "name": "delay",
+            "label": "Delay",
+            "tooltip": "The delay of the tween.",
+            "defValue": 0,
+            "customDefinition": false,
+            "type": {
+                "id": "number"
+            }
+        }
+    ]
+}

@@ -24,7 +24,24 @@
             "text": "Game Over!",
             "font": "hyperdrive",
             "fontSize": 200,
-            "list": []
+            "list": [
+                {
+                    "prefabId": "d90814ed-6b9b-48a5-b3ae-48f006ecf4ae",
+                    "id": "c8eda6c8-2ac8-4a99-b6b8-6950c52195be",
+                    "label": "fadeInScript",
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": []
+                },
+                {
+                    "prefabId": "1de438d1-5401-42d3-a8b0-adda8fc8c320",
+                    "id": "390a34b9-6af3-4333-ae37-4998adb2e2d5",
+                    "label": "floatingObjectScript",
+                    "components": [],
+                    "nestedPrefabs": [],
+                    "list": []
+                }
+            ]
         }
     ],
     "plainObjects": [],

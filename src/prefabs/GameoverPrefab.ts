@@ -4,6 +4,8 @@
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
+import FadeInScript from "../script-nodes/ui/FadeInScript";
+import FloatingObjectScript from "../script-nodes/ui/FloatingObjectScript";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -15,6 +17,12 @@ export default class GameoverPrefab extends Phaser.GameObjects.BitmapText {
 		this.setOrigin(0.5, 0.5);
 		this.text = "Game Over!";
 		this.fontSize = 200;
+
+		// fadeInScript
+		new FadeInScript(this);
+
+		// floatingObjectScript
+		new FloatingObjectScript(this);
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.

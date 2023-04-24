@@ -48,10 +48,11 @@ export default class ScriptNode {
             this.scene.events.on(Phaser.Scenes.Events.UPDATE, this.update, this);
         }
 
-        if (listenStart || listenUpdate || listenDestroy) {
+        if (listenAwake || listenStart || listenUpdate || listenDestroy) {
 
             const destroyCallback = () => {
 
+                this.scene.events.off("scene-awake", this.awake, this);
                 this.scene.events.off(Phaser.Scenes.Events.UPDATE, this.start, this);
                 this.scene.events.off(Phaser.Scenes.Events.UPDATE, this.update, this);
 
