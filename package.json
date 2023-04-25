@@ -8,6 +8,7 @@
     "build": "webpack --mode=production && phaser-asset-pack-hashing -r dist",
     "editor": "phasereditor2d-launcher -project . -port 1959",
     "editor-remote": "phasereditor2d-launcher -project . -disable-open-browser -public -port 1959",
+    "editor-dev": "phasereditor2d-launcher -project . -public -port 1959 -editor $PHASEREDITOR_HOME/PhaserEditor2D-v3/source/editor -dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Phaser Editor 2D <developers@phasereditor2d.com> (https://phasereditor2d.com/)",
