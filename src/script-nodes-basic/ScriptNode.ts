@@ -103,18 +103,18 @@ export default class ScriptNode {
         this.children.push(child);
     }
 
-    executeChildren(args?: any) {
+    executeChildren(...args: any[]) {
 
         if (this._children) {
 
             for(const child of this._children) {
 
-                child.execute(args);
+                child.execute(...args);
             }
         }
     }
 
-    execute(args?: any): void {
+    execute(...args: any[]): void {
         // override this on executable nodes
     }
 

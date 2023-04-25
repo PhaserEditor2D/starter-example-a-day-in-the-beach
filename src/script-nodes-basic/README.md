@@ -36,7 +36,7 @@ Actions are script that are executed manually or by other nodes, like triggers o
 * **CallbackActionScript** - executes the given `callback` expression.
 * **StartSceneActionScript** - starts the given `sceneKey` scene.
 * **ExecActionScript** - executes the given `targetAction`.
-* **EmitEventActionScriptScript** - the given `eventEmitter` emits the given `eventName`.
+* **EmitEventActionScript** - the given `eventEmitter` emits the given `eventName`.
 
 ## ScriptNode
 
@@ -131,7 +131,7 @@ For example, let's say you have a **JumpAction** for jumping a character. But yo
 
 So, you can use different **ExecActionScript** nodes in different contexts, but referencing the same **JumpAction** node.
 
-## EmitEventActionScriptScript
+## EmitEventActionScript
 
 An action like script. It calls the emit method of the given `eventEmitter` with the given `eventName`. As argument of the event it uses the argument received in the `execute()` method.
 
