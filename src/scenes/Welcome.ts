@@ -194,18 +194,11 @@ export default class Welcome extends Phaser.Scene {
 
 		GameSounds.init(this);
 
-		if (process.env.NODE_ENV === "development") {
+		// if (this.musicBtn && this.soundBtn) {
 
-			const start = new URLSearchParams(location.search).get("start");
-
-			if (start) {
-
-				console.log(`Development: jump to ${start}`);
-				this.scene.start(start);
-
-				return;
-			}
-		}
+		// 	this.musicSwitchImageAction.isOn = GameSounds.musicEnabled;
+		// 	this.soundSwitchImageAction.isOn = GameSounds.effectsEnabled;
+		// }
 	}
 
 	/* END-USER-CODE */
