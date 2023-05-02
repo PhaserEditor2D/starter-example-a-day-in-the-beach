@@ -23,6 +23,7 @@ export default class OnPointerDownStartSceneScript extends OnPointerDownScript {
 		const startSceneActionScript = new StartSceneActionScript(pushActionScript);
 
 		this.startSceneActionScript = startSceneActionScript;
+		this.pushActionScript = pushActionScript;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -30,6 +31,7 @@ export default class OnPointerDownStartSceneScript extends OnPointerDownScript {
 	}
 
 	public startSceneActionScript: StartSceneActionScript;
+	public pushActionScript: PushActionScript;
 
 	/* START-USER-CODE */
 

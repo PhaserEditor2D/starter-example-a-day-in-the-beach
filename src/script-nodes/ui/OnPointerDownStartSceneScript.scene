@@ -23,7 +23,7 @@
                     "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
                     "id": "2e8f41ae-0af8-4977-8851-9827e5b57383",
                     "label": "pushActionScript",
-                    "scope": "LOCAL_NESTED_PREFAB",
+                    "scope": "NESTED_PREFAB",
                     "components": [],
                     "nestedPrefabs": [],
                     "list": [

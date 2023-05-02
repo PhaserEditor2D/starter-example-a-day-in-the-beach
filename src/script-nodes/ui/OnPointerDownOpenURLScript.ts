@@ -26,6 +26,8 @@ export default class OnPointerDownOpenURLScript extends ScriptNode {
 		const openURLActionScript = new OpenURLActionScript(pushActionScript);
 
 		this.openURLActionScript = openURLActionScript;
+		this.pushActionScript = pushActionScript;
+		this.onPointerDownScript = onPointerDownScript;
 
 		/* START-USER-CTR-CODE */
 		// Write your code here.
@@ -33,6 +35,8 @@ export default class OnPointerDownOpenURLScript extends ScriptNode {
 	}
 
 	public openURLActionScript: OpenURLActionScript;
+	public pushActionScript: PushActionScript;
+	public onPointerDownScript: OnPointerDownScript;
 
 	/* START-USER-CODE */
 
