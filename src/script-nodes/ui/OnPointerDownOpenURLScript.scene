@@ -22,7 +22,7 @@
                     "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
                     "id": "bc0c63a7-eb8e-45d6-b210-d661fc56044c",
                     "label": "onPointerDownScript",
-                    "scope": "NESTED_PREFAB",
+                    "scope": "LOCAL_NESTED_PREFAB",
                     "components": [],
                     "nestedPrefabs": [],
                     "list": [
@@ -30,7 +30,7 @@
                             "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
                             "id": "4def6f54-59b2-4cff-9d6f-b88ace4bfe93",
                             "label": "pushActionScript",
-                            "scope": "NESTED_PREFAB",
+                            "scope": "LOCAL_NESTED_PREFAB",
                             "components": [],
                             "nestedPrefabs": [],
                             "list": [
