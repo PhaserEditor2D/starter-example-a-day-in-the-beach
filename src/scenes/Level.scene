@@ -16,87 +16,73 @@
             "type": "Image",
             "id": "470ec990-0468-4835-89bc-cd0c3e622257",
             "label": "underwater_1",
-            "components": [],
             "texture": {
                 "key": "underwater-1"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "7c94cb2a-50bf-404d-96f7-6fe1a8f2e70a",
             "label": "underwater_2",
-            "components": [],
             "texture": {
                 "key": "underwater-2"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "7553619d-b7ca-4eee-9e71-74e85daca863",
             "label": "underwater_3",
-            "components": [],
             "texture": {
                 "key": "underwater-3"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "80900b16-af4f-4b7c-899b-d2e20e295fb6",
             "label": "underwater_5",
-            "components": [],
             "texture": {
                 "key": "underwater-5"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "47942e6e-432d-493e-b853-9e767d5f2c41",
             "label": "underwater_7",
-            "components": [],
             "texture": {
                 "key": "underwater-7"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "22345ce7-0cd7-4d42-b560-d290854b638b",
             "label": "underwater_8",
-            "components": [],
             "texture": {
                 "key": "underwater-8"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "1a6b6d3a-db8a-4589-b37a-5e35160c85b8",
             "label": "underwater_4",
-            "components": [],
             "texture": {
                 "key": "underwater-4"
             },
             "originX": 0,
             "originY": 0,
             "alphaBottomLeft": 0,
-            "alphaBottomRight": 0,
-            "list": []
+            "alphaBottomRight": 0
         },
         {
             "prefabId": "41c20759-6986-420d-b99c-44f4d40b476c",
@@ -105,23 +91,17 @@
                 "x",
                 "y"
             ],
-            "label": "uiLayer",
-            "components": [],
-            "nestedPrefabs": [],
-            "list": []
+            "label": "uiLayer"
         },
         {
             "prefabId": "d8801a27-29ff-4774-a8a6-1f4e9b14d6cc",
             "id": "789d2f54-a153-406e-a5e6-cf5e700681e3",
             "label": "gameplayScript",
-            "components": [],
             "nestedPrefabs": [
                 {
                     "prefabId": "6d1b76e2-9d92-41b8-a055-a3c984f170d9",
                     "id": "97bff27a-2f63-4ba9-90b9-dbf5b2cb870c",
                     "label": "textures",
-                    "components": [],
-                    "nestedPrefabs": [],
                     "list": [
                         {
                             "prefabId": "d220abfa-d1cb-4c05-9ac3-e95aa746651b",
@@ -130,10 +110,7 @@
                                 "texture"
                             ],
                             "label": "yellow",
-                            "texture": "{\"key\":\"star-yellow\"}",
-                            "components": [],
-                            "nestedPrefabs": [],
-                            "list": []
+                            "texture": "{\"key\":\"star-yellow\"}"
                         },
                         {
                             "prefabId": "d220abfa-d1cb-4c05-9ac3-e95aa746651b",
@@ -142,10 +119,7 @@
                                 "texture"
                             ],
                             "label": "orange",
-                            "texture": "{\"key\":\"star-orange\"}",
-                            "components": [],
-                            "nestedPrefabs": [],
-                            "list": []
+                            "texture": "{\"key\":\"star-orange\"}"
                         },
                         {
                             "prefabId": "d220abfa-d1cb-4c05-9ac3-e95aa746651b",
@@ -154,15 +128,11 @@
                                 "texture"
                             ],
                             "label": "green",
-                            "texture": "{\"key\":\"star-green\"}",
-                            "components": [],
-                            "nestedPrefabs": [],
-                            "list": []
+                            "texture": "{\"key\":\"star-green\"}"
                         }
                     ]
                 }
-            ],
-            "list": []
+            ]
         }
     ],
     "plainObjects": [],
@@ -170,6 +140,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 4
     }
 }

@@ -16,15 +16,34 @@
             "type": "ScriptNode",
             "id": "8d37735a-4018-4b78-a6cd-4d24bdbe1ced",
             "label": "scriptnode_1",
-            "components": [],
             "list": [
                 {
                     "type": "ScriptNode",
                     "id": "6d1b76e2-9d92-41b8-a055-a3c984f170d9",
                     "label": "textures",
-                    "scope": "NESTED_PREFAB",
-                    "components": [],
-                    "list": []
+                    "scope": "NESTED_PREFAB"
+                },
+                {
+                    "prefabId": "437c7d1d-12e5-4251-8d72-3ee5abae49d2",
+                    "id": "08eebbef-8ed9-4f60-bd2e-27da5fc0bf69",
+                    "unlock": [
+                        "eventName",
+                        "eventEmitter"
+                    ],
+                    "label": "onGamePaused",
+                    "eventName": "game-paused",
+                    "eventEmitter": "scene.events",
+                    "list": [
+                        {
+                            "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
+                            "id": "959d5b5f-7e4d-49c6-98d0-1ceecef27433",
+                            "unlock": [
+                                "callback"
+                            ],
+                            "label": "callTogglePause",
+                            "callback": "() => this.togglePause()"
+                        }
+                    ]
                 }
             ]
         }
@@ -34,6 +53,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 4
     }
 }

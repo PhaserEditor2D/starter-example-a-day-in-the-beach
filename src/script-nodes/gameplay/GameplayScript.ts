@@ -5,6 +5,8 @@
 
 import ScriptNode from "../../script-nodes-basic/ScriptNode";
 import Phaser from "phaser";
+import OnEventScript from "../../script-nodes-basic/OnEventScript";
+import CallbackActionScript from "../../script-nodes-basic/CallbackActionScript";
 /* START-USER-IMPORTS */
 import Star from "../../prefabs/Star";
 import { GameSounds } from "../../GameSounds";
@@ -20,12 +22,22 @@ export default class GameplayScript extends ScriptNode {
 		// textures
 		const textures = new ScriptNode(this);
 
+		// onGamePaused
+		const onGamePaused = new OnEventScript(this);
+
+		// callTogglePause
+		const callTogglePause = new CallbackActionScript(onGamePaused);
+
+		// onGamePaused (prefab fields)
+		onGamePaused.eventName = "game-paused";
+		onGamePaused.eventEmitter = "scene.events";
+
+		// callTogglePause (prefab fields)
+		callTogglePause.callback = () => this.togglePause();
+
 		this.textures = textures;
 
 		/* START-USER-CTR-CODE */
-
-		this.scene.events.on("game-paused", this.togglePause, this);
-		this.scene.events.on(Phaser.Scenes.Events.SHUTDOWN, () => this.scene.events.off("game-paused", this.togglePause, this));
 
 		this.scene.time.paused = false;
 		this.scene.physics.world.isPaused = false;
