@@ -1,7 +1,3 @@
-## v1.0.5 - Sep 30, 2023
-
-* Improve Gitpod configuration.
-
 ## v1.0.4 - Jun 25, 2023
 
 * Migrates the **Event Name** properties of the **EmitEventActionScript** and **OnEventScript** script nodes to the new **Event** property type.
