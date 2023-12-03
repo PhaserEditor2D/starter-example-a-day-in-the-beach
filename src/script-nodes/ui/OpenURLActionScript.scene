@@ -4,6 +4,8 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "prefabObjDisplayFmt": "Open URL \"${url}\"",
+        "displayName": "Open URL Action",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -15,9 +17,7 @@
         {
             "type": "ScriptNode",
             "id": "aec327f5-9205-4cd0-8a59-20515309e49a",
-            "label": "scriptnode_1",
-            "components": [],
-            "list": []
+            "label": "scriptnode_1"
         }
     ],
     "plainObjects": [],
@@ -25,7 +25,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     },
     "prefabProperties": [
         {

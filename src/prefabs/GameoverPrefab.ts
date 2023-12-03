@@ -4,8 +4,10 @@
 /* START OF COMPILED CODE */
 
 import Phaser from "phaser";
-import FadeInScript from "../script-nodes/ui/FadeInScript";
 import FloatingObjectScript from "../script-nodes/ui/FloatingObjectScript";
+import { OnAwakeScript } from "@phasereditor2d/scripts-core";
+import { FadeActionScript } from "@phasereditor2d/scripts-simple-animations";
+import { DurationConfigComp } from "@phasereditor2d/scripts-simple-animations";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
@@ -18,14 +20,23 @@ export default class GameoverPrefab extends Phaser.GameObjects.BitmapText {
 		this.text = "Game Over!";
 		this.fontSize = 200;
 
-		// fadeInScript
-		new FadeInScript(this);
-
 		// floatingObjectScript
 		new FloatingObjectScript(this);
 
+		// onAwakeScript
+		const onAwakeScript = new OnAwakeScript(this);
+
+		// fadeActionScript
+		const fadeActionScript = new FadeActionScript(onAwakeScript);
+
+		// fadeActionScript (prefab fields)
+		fadeActionScript.fadeDirection = "FadeIn";
+
+		// fadeActionScript (components)
+		const fadeActionScriptDurationConfigComp = new DurationConfigComp(fadeActionScript);
+		fadeActionScriptDurationConfigComp.duration = 4000;
+
 		/* START-USER-CTR-CODE */
-		// Write your code here.
 		/* END-USER-CTR-CODE */
 	}
 

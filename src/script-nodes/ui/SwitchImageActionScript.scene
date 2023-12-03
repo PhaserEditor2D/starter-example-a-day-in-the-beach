@@ -4,6 +4,8 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "prefabObjDisplayFmt": "Switch image \"${mementoKey}\"",
+        "displayName": "Switch Image Action",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -19,10 +21,7 @@
                 "x",
                 "y"
             ],
-            "label": "scriptnode_1",
-            "components": [],
-            "nestedPrefabs": [],
-            "list": []
+            "label": "scriptnode_1"
         }
     ],
     "plainObjects": [],
@@ -30,7 +29,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     },
     "prefabProperties": [
         {

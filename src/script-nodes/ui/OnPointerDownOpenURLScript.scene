@@ -16,32 +16,24 @@
             "type": "ScriptNode",
             "id": "27ad83b5-8482-413a-adfe-ede39a98b86e",
             "label": "scriptnode_1",
-            "components": [],
             "list": [
                 {
                     "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
                     "id": "bc0c63a7-eb8e-45d6-b210-d661fc56044c",
                     "label": "onPointerDownScript",
                     "scope": "NESTED_PREFAB",
-                    "components": [],
-                    "nestedPrefabs": [],
                     "list": [
                         {
-                            "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
-                            "id": "4def6f54-59b2-4cff-9d6f-b88ace4bfe93",
+                            "prefabId": "0e39177a-6e19-4b56-a7c2-2360a2e41505",
+                            "id": "741680c1-d7f5-42d4-85c8-3388ded510d3",
                             "label": "pushActionScript",
                             "scope": "NESTED_PREFAB",
-                            "components": [],
-                            "nestedPrefabs": [],
                             "list": [
                                 {
                                     "prefabId": "343cd187-34b1-4df7-9aec-75fdad2977ba",
-                                    "id": "a433f8fe-9815-455b-bc49-c2119c20e205",
+                                    "id": "95049f79-e3a0-49e5-8699-5edf1d35577f",
                                     "label": "openURLActionScript",
-                                    "scope": "NESTED_PREFAB",
-                                    "components": [],
-                                    "nestedPrefabs": [],
-                                    "list": []
+                                    "scope": "NESTED_PREFAB"
                                 }
                             ]
                         }
@@ -55,6 +47,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }

@@ -6,19 +6,19 @@
 import Phaser from "phaser";
 import FloatingObjectScript from "../script-nodes/ui/FloatingObjectScript";
 import OnPointerDownStartSceneScript from "../script-nodes/ui/OnPointerDownStartSceneScript";
-import OnPointerDownScript from "../script-nodes-basic/OnPointerDownScript";
-import PushActionScript from "../script-nodes/ui/PushActionScript";
+import { OnPointerDownScript } from "@phasereditor2d/scripts-core";
+import { PushActionScript } from "@phasereditor2d/scripts-simple-animations";
+import { EmitEventActionScript } from "@phasereditor2d/scripts-core";
 import SwitchImageActionScript from "../script-nodes/ui/SwitchImageActionScript";
-import EmitEventActionScript from "../script-nodes-basic/EmitEventActionScript";
-import OnEventScript from "../script-nodes-basic/OnEventScript";
+import { OnEventScript } from "@phasereditor2d/scripts-core";
 import UpdateTextAction from "../script-nodes/gameplay/UpdateTextAction";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */
 
-export default class UILayerPrefab extends Phaser.GameObjects.Layer {
+export default class UILayerPrefab extends Phaser.GameObjects.Container {
 
-	constructor(scene: Phaser.Scene) {
-		super(scene);
+	constructor(scene: Phaser.Scene, x?: number, y?: number) {
+		super(scene, x ?? 0, y ?? 0);
 
 		// homeButton
 		const homeButton = scene.add.image(1782, 116, "buttons", "Button Pack - Green_Button Green - Home.png");
@@ -37,14 +37,14 @@ export default class UILayerPrefab extends Phaser.GameObjects.Layer {
 		// onPointerDownScript
 		const onPointerDownScript = new OnPointerDownScript(pauseBtn);
 
-		// pushActionScript
-		const pushActionScript = new PushActionScript(onPointerDownScript);
-
-		// pauseSwitchImageAction
-		const pauseSwitchImageAction = new SwitchImageActionScript(pushActionScript);
+		// pushActionScript_1
+		const pushActionScript_1 = new PushActionScript(onPointerDownScript);
 
 		// emitGamePausedEvent
-		const emitGamePausedEvent = new EmitEventActionScript(pushActionScript);
+		const emitGamePausedEvent = new EmitEventActionScript(pushActionScript_1);
+
+		// pauseSwitchImageAction
+		const pauseSwitchImageAction = new SwitchImageActionScript(pushActionScript_1);
 
 		// floatingObjectScript
 		const floatingObjectScript = new FloatingObjectScript(pauseBtn);
@@ -105,14 +105,14 @@ export default class UILayerPrefab extends Phaser.GameObjects.Layer {
 		// onPointerDownStartSceneScript.startSceneActionScript (prefab fields)
 		onPointerDownStartSceneScript.startSceneActionScript.sceneKey = "Welcome";
 
+		// emitGamePausedEvent (prefab fields)
+		emitGamePausedEvent.eventName = "game-paused";
+		emitGamePausedEvent.eventEmitter = "scene.events";
+
 		// pauseSwitchImageAction (prefab fields)
 		pauseSwitchImageAction.onTexture = {"key":"buttons","frame":"Button Pack - Green_Button Green - Pause.png"};
 		pauseSwitchImageAction.offTexture = {"key":"buttons","frame":"Button Pack - Green_Button Green - Play.png"};
 		pauseSwitchImageAction.isOn = true;
-
-		// emitGamePausedEvent (prefab fields)
-		emitGamePausedEvent.eventName = "game-paused";
-		emitGamePausedEvent.eventEmitter = "scene.events";
 
 		// floatingObjectScript (prefab fields)
 		floatingObjectScript.offset = 5;

@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-import ScriptNode from "../../script-nodes-basic/ScriptNode";
+import { ScriptNode } from "@phasereditor2d/scripts-core";
 import Phaser from "phaser";
-import OnEventScript from "../../script-nodes-basic/OnEventScript";
-import CallbackActionScript from "../../script-nodes-basic/CallbackActionScript";
+import { OnEventScript } from "@phasereditor2d/scripts-core";
+import { CallbackActionScript } from "@phasereditor2d/scripts-core";
 /* START-USER-IMPORTS */
 import Star from "../../prefabs/Star";
 import { GameSounds } from "../../GameSounds";
@@ -177,7 +177,10 @@ export default class GameplayScript extends ScriptNode {
 	private showGameOverMessage() {
 
 		const msg = new GameoverPrefab(this.scene);
+
 		this.scene.add.existing(msg);
+
+		this.scene.events.emit("scene-awake");
 	}
 
 	private pickStar(star: Star) {

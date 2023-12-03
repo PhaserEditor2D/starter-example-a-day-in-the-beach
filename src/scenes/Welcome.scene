@@ -19,79 +19,66 @@
             "type": "Image",
             "id": "5398ecfd-79a7-4978-848f-2f92957bad6c",
             "label": "sky",
-            "components": [],
             "texture": {
                 "key": "sky"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "049b13a1-6d42-401e-af24-cdc281ea3b8f",
             "label": "sea",
-            "components": [],
             "texture": {
                 "key": "sea"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "97250eae-adbe-42ea-8d66-5cfd097897ff",
             "label": "land",
-            "components": [],
             "texture": {
                 "key": "land"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "643f59ec-9293-4f2b-8a41-1733bb4848d4",
             "label": "cloud",
-            "components": [],
             "texture": {
                 "key": "cloud"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "69959fa8-3a91-4950-a4b0-2471295dbbe1",
             "label": "island",
-            "components": [],
             "texture": {
                 "key": "island"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "d49f172a-ce7b-4bde-beda-7a3e89f25d2b",
             "label": "decor",
-            "components": [],
             "texture": {
                 "key": "decor"
             },
             "originX": 0,
-            "originY": 0,
-            "list": []
+            "originY": 0
         },
         {
             "type": "Image",
             "id": "67b7ab9c-33e8-4056-ac60-60250b0a261e",
             "label": "playBtn",
-            "components": [],
             "texture": {
                 "key": "buttons",
                 "frame": "Button Pack - Green_Button Green - Play.png"
@@ -105,29 +92,38 @@
                     "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
                     "id": "4560296d-496e-4a49-8ba8-b93e21cc0d36",
                     "label": "onPointerDownScript",
-                    "components": [],
-                    "nestedPrefabs": [],
                     "list": [
                         {
-                            "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
-                            "id": "c296c7de-0d52-48b9-91aa-ce7ffcffae68",
-                            "label": "pushActionScript",
-                            "components": [],
-                            "nestedPrefabs": [],
+                            "prefabId": "0e39177a-6e19-4b56-a7c2-2360a2e41505",
+                            "id": "0d85541e-fe8c-40df-a851-668f3ed0b73c",
+                            "label": "pushActionScript_2",
                             "list": [
                                 {
                                     "prefabId": "2d3f9249-6fcd-4c7d-bd2f-77fa616af7e8",
-                                    "id": "ea553039-83f6-4ab9-89dd-64540e2e49bf",
+                                    "id": "77df73b2-86ce-46b9-85fc-3623c5639e46",
                                     "unlock": [
                                         "sceneKey"
                                     ],
                                     "label": "startGameAction",
-                                    "sceneKey": "Level",
-                                    "components": [],
-                                    "nestedPrefabs": [],
-                                    "list": []
+                                    "sceneKey": "Level"
                                 }
                             ]
+                        }
+                    ]
+                },
+                {
+                    "prefabId": "7028a0e2-cd14-44b7-b2a4-68dac16ece00",
+                    "id": "c5c97a6c-232e-4d3c-8ec8-d569941c0adc",
+                    "label": "onAwakeScript",
+                    "list": [
+                        {
+                            "prefabId": "3d337935-cdca-4937-9126-9f75bc2486de",
+                            "id": "a1325510-edb7-48d3-b04b-f1f5d8af2944",
+                            "unlock": [
+                                "from"
+                            ],
+                            "label": "moveInSceneActionScript",
+                            "from": "BOTTOM"
                         }
                     ]
                 }
@@ -137,7 +133,6 @@
             "type": "Image",
             "id": "ae40c417-e513-4750-b524-04da36402c04",
             "label": "facebookBtn",
-            "components": [],
             "texture": {
                 "key": "buttons",
                 "frame": "Button Pack - Green_Button Green - Facebook.png"
@@ -149,40 +144,31 @@
                     "prefabId": "3e11f6a1-68a0-4fcf-a502-2fbe8bbf696f",
                     "id": "2b26900d-eff3-4231-ac3f-5ce89c262560",
                     "label": "onPointerDownOpenURLScript",
-                    "components": [],
                     "nestedPrefabs": [
                         {
                             "prefabId": "bc0c63a7-eb8e-45d6-b210-d661fc56044c",
-                            "id": "9d8ab5b3-8154-4a42-90c4-456e878502d8",
+                            "id": "eaed44ee-589b-4d97-979f-544146272969",
                             "label": "onPointerDownScript",
-                            "components": [],
                             "nestedPrefabs": [
                                 {
-                                    "prefabId": "4def6f54-59b2-4cff-9d6f-b88ace4bfe93",
-                                    "id": "a9f69c8c-71a9-4cf9-88a2-5f9ac04840ec",
+                                    "prefabId": "741680c1-d7f5-42d4-85c8-3388ded510d3",
+                                    "id": "f1e0d59b-7abb-4533-9197-7cf71f2e5e49",
                                     "label": "pushActionScript",
-                                    "components": [],
                                     "nestedPrefabs": [
                                         {
-                                            "prefabId": "a433f8fe-9815-455b-bc49-c2119c20e205",
-                                            "id": "ee6b1f27-5c11-4ad7-8555-d2804e19a4ff",
+                                            "prefabId": "95049f79-e3a0-49e5-8699-5edf1d35577f",
+                                            "id": "94adbe0b-8e53-414e-8094-5ae2bb57cbaa",
                                             "unlock": [
                                                 "url"
                                             ],
                                             "label": "openURLActionScript",
-                                            "url": "https://facebook.com/PhaserEditor2D",
-                                            "components": [],
-                                            "nestedPrefabs": [],
-                                            "list": []
+                                            "url": "https://www.facebook.com/PhaserEditor2D"
                                         }
-                                    ],
-                                    "list": []
+                                    ]
                                 }
-                            ],
-                            "list": []
+                            ]
                         }
-                    ],
-                    "list": []
+                    ]
                 }
             ]
         },
@@ -190,7 +176,6 @@
             "type": "Image",
             "id": "86af34e7-d3bf-4142-b9c6-ab9342334f6f",
             "label": "twitterBtn",
-            "components": [],
             "texture": {
                 "key": "buttons",
                 "frame": "Button Pack - Green_Button Green - Twitter.png"
@@ -202,40 +187,31 @@
                     "prefabId": "3e11f6a1-68a0-4fcf-a502-2fbe8bbf696f",
                     "id": "7253cbfb-b2c8-4835-a8ce-dcb575939b8d",
                     "label": "onPointerDownOpenURLScript_1",
-                    "components": [],
                     "nestedPrefabs": [
                         {
                             "prefabId": "bc0c63a7-eb8e-45d6-b210-d661fc56044c",
-                            "id": "8673ef13-48ed-4a9e-8b5e-1e4c1d2941b1",
+                            "id": "f7271016-8d37-462f-ad9f-03ad68601633",
                             "label": "onPointerDownScript",
-                            "components": [],
                             "nestedPrefabs": [
                                 {
-                                    "prefabId": "4def6f54-59b2-4cff-9d6f-b88ace4bfe93",
-                                    "id": "0eec5e76-0f41-4522-aefa-0c80e7dbda9a",
+                                    "prefabId": "741680c1-d7f5-42d4-85c8-3388ded510d3",
+                                    "id": "f1c937ba-f792-4857-8e5a-22cee8421a13",
                                     "label": "pushActionScript",
-                                    "components": [],
                                     "nestedPrefabs": [
                                         {
-                                            "prefabId": "a433f8fe-9815-455b-bc49-c2119c20e205",
-                                            "id": "bf37340c-5e47-4c4c-abc8-e19971815217",
+                                            "prefabId": "95049f79-e3a0-49e5-8699-5edf1d35577f",
+                                            "id": "5c5dbc5e-9abe-4141-b12f-eaa810e13304",
                                             "unlock": [
                                                 "url"
                                             ],
                                             "label": "openURLActionScript",
-                                            "url": "https://twitter.com/PhaserEditor2D",
-                                            "components": [],
-                                            "nestedPrefabs": [],
-                                            "list": []
+                                            "url": "https://www.twitter.com/PhaserEditor2D"
                                         }
-                                    ],
-                                    "list": []
+                                    ]
                                 }
-                            ],
-                            "list": []
+                            ]
                         }
-                    ],
-                    "list": []
+                    ]
                 }
             ]
         },
@@ -244,7 +220,6 @@
             "id": "1d9b8817-cefb-4f7b-ae6f-e9f244735ff5",
             "label": "musicBtn",
             "scope": "CLASS",
-            "components": [],
             "texture": {
                 "key": "buttons",
                 "frame": "Button Pack - Green_Button Green - Music.png"
@@ -256,19 +231,24 @@
                     "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
                     "id": "d2a60310-574a-40d9-8bf3-1e70f1422733",
                     "label": "onPointerDownScript_3",
-                    "components": [],
-                    "nestedPrefabs": [],
                     "list": [
                         {
-                            "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
-                            "id": "c2cca35a-a21e-4ed4-a2f6-bbef213ac550",
-                            "label": "pushActionScript_2",
-                            "components": [],
-                            "nestedPrefabs": [],
+                            "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
+                            "id": "91bdb37b-36f1-4052-addf-3817f7151675",
+                            "unlock": [
+                                "callback"
+                            ],
+                            "label": "toggleMusicAction",
+                            "callback": "() => GameSounds.toggleMusic()"
+                        },
+                        {
+                            "prefabId": "0e39177a-6e19-4b56-a7c2-2360a2e41505",
+                            "id": "7a4f6de8-eb27-445c-99d1-4123f4c9440a",
+                            "label": "pushActionScript_1",
                             "list": [
                                 {
                                     "prefabId": "b61e7279-4e75-4f73-b26d-4f37ff949c85",
-                                    "id": "f0a9d6cf-9c3f-4062-889c-2f8e2170b3d5",
+                                    "id": "94423b71-706f-4b10-9a96-a0437102f237",
                                     "unlock": [
                                         "onTexture",
                                         "offTexture",
@@ -280,24 +260,9 @@
                                     "onTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Green_Button Green - Music.png\"}",
                                     "offTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Gray_Button Gray - Music.png\"}",
                                     "isOn": true,
-                                    "mementoKey": "music",
-                                    "components": [],
-                                    "nestedPrefabs": [],
-                                    "list": []
+                                    "mementoKey": "music"
                                 }
                             ]
-                        },
-                        {
-                            "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
-                            "id": "91bdb37b-36f1-4052-addf-3817f7151675",
-                            "unlock": [
-                                "callback"
-                            ],
-                            "label": "toggleMusicAction",
-                            "callback": "() => GameSounds.toggleMusic()",
-                            "components": [],
-                            "nestedPrefabs": [],
-                            "list": []
                         }
                     ]
                 }
@@ -308,7 +273,6 @@
             "id": "00450c48-8f1a-47e3-866c-853972027118",
             "label": "soundBtn",
             "scope": "PUBLIC",
-            "components": [],
             "texture": {
                 "key": "buttons",
                 "frame": "Button Pack - Green_Button Green - Sound.png"
@@ -320,19 +284,24 @@
                     "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
                     "id": "a038f658-630c-41b4-8c09-ceb828c6ed61",
                     "label": "onPointerDownScript_2",
-                    "components": [],
-                    "nestedPrefabs": [],
                     "list": [
                         {
-                            "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
-                            "id": "cdd994fc-491f-4ae3-ac28-c747b2b237fc",
-                            "label": "pushActionScript_1",
-                            "components": [],
-                            "nestedPrefabs": [],
+                            "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
+                            "id": "0be8f7ab-e8f4-464e-9d29-5fd5da2bcbd6",
+                            "unlock": [
+                                "callback"
+                            ],
+                            "label": "toggleEffectsAction",
+                            "callback": "() => GameSounds.toggleEffects()"
+                        },
+                        {
+                            "prefabId": "0e39177a-6e19-4b56-a7c2-2360a2e41505",
+                            "id": "80fb78a1-6f7d-400b-bbc3-b69183a02704",
+                            "label": "pushActionScript_3",
                             "list": [
                                 {
                                     "prefabId": "b61e7279-4e75-4f73-b26d-4f37ff949c85",
-                                    "id": "0161125f-32aa-4b2e-8ecc-d9f0f52c99ad",
+                                    "id": "4c497f21-b699-4a22-adb6-71452c043ab2",
                                     "unlock": [
                                         "onTexture",
                                         "offTexture",
@@ -344,24 +313,9 @@
                                     "onTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Green_Button Green - Sound.png\"}",
                                     "offTexture": "{\"key\":\"buttons\",\"frame\":\"Button Pack - Gray_Button Gray - Sound.png\"}",
                                     "isOn": true,
-                                    "mementoKey": "effects",
-                                    "components": [],
-                                    "nestedPrefabs": [],
-                                    "list": []
+                                    "mementoKey": "effects"
                                 }
                             ]
-                        },
-                        {
-                            "prefabId": "e29bc630-dabe-4a8c-97e0-45ccb875b877",
-                            "id": "0be8f7ab-e8f4-464e-9d29-5fd5da2bcbd6",
-                            "unlock": [
-                                "callback"
-                            ],
-                            "label": "toggleEffectsAction",
-                            "callback": "() => GameSounds.toggleEffects()",
-                            "components": [],
-                            "nestedPrefabs": [],
-                            "list": []
                         }
                     ]
                 }
@@ -371,7 +325,6 @@
             "type": "BitmapText",
             "id": "fd1bd600-a05b-4e11-aeee-5ddda671b5ef",
             "label": "bitmaptext",
-            "components": [],
             "x": 960,
             "y": 120,
             "originX": 0.5,
@@ -387,10 +340,7 @@
                         "offset"
                     ],
                     "label": "floatingObjectScript",
-                    "offset": 10,
-                    "components": [],
-                    "nestedPrefabs": [],
-                    "list": []
+                    "offset": 10
                 }
             ]
         },
@@ -404,8 +354,6 @@
             "label": "onKeydown_SPACE",
             "eventName": "keydown-SPACE",
             "eventEmitter": "scene.input.keyboard",
-            "components": [],
-            "nestedPrefabs": [],
             "list": [
                 {
                     "prefabId": "00708fed-6db6-443f-aa52-29c655f684ed",
@@ -414,10 +362,7 @@
                         "targetAction"
                     ],
                     "label": "startGame_2",
-                    "targetAction": "startGameAction",
-                    "components": [],
-                    "nestedPrefabs": [],
-                    "list": []
+                    "targetAction": "startGameAction"
                 }
             ]
         },
@@ -431,8 +376,6 @@
             "label": "onKeydown_ENTER",
             "eventName": "keydown-ENTER",
             "eventEmitter": "scene.input.keyboard",
-            "components": [],
-            "nestedPrefabs": [],
             "list": [
                 {
                     "prefabId": "00708fed-6db6-443f-aa52-29c655f684ed",
@@ -441,10 +384,7 @@
                         "targetAction"
                     ],
                     "label": "startGame_1",
-                    "targetAction": "startGameAction",
-                    "components": [],
-                    "nestedPrefabs": [],
-                    "list": []
+                    "targetAction": "startGameAction"
                 }
             ]
         }
@@ -454,6 +394,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }

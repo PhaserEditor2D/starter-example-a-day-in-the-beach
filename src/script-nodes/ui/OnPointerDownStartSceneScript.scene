@@ -4,6 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "prefabObjDisplayFmt": "On pointer down start scene",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -16,25 +17,18 @@
             "prefabId": "a06ed60b-79f1-4444-bf35-89046f71f954",
             "id": "9f1cf09e-b143-4598-b2c6-c9dfba549bfb",
             "label": "onPointerDownScript",
-            "components": [],
-            "nestedPrefabs": [],
             "list": [
                 {
-                    "prefabId": "1604b45d-4227-457b-a69c-061379f2b518",
-                    "id": "2e8f41ae-0af8-4977-8851-9827e5b57383",
+                    "prefabId": "0e39177a-6e19-4b56-a7c2-2360a2e41505",
+                    "id": "824ae36d-a518-4d4a-a147-dd42cfe05f86",
                     "label": "pushActionScript",
                     "scope": "NESTED_PREFAB",
-                    "components": [],
-                    "nestedPrefabs": [],
                     "list": [
                         {
                             "prefabId": "2d3f9249-6fcd-4c7d-bd2f-77fa616af7e8",
-                            "id": "35312692-9386-4fdc-80e7-f1b60b30396f",
+                            "id": "79d67f29-9d77-44ce-8b99-861c77fdf63a",
                             "label": "startSceneActionScript",
-                            "scope": "NESTED_PREFAB",
-                            "components": [],
-                            "nestedPrefabs": [],
-                            "list": []
+                            "scope": "NESTED_PREFAB"
                         }
                     ]
                 }
@@ -46,6 +40,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     }
 }

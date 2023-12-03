@@ -4,6 +4,7 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "prefabObjDisplayFmt": "Floating object: offset = ${offset}",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -15,10 +16,7 @@
         {
             "prefabId": "5e746613-c01a-42aa-8681-4950bb2f23ce",
             "id": "0953158b-711b-4e3e-9fcb-2d538bb6b261",
-            "label": "spriteScriptNode",
-            "components": [],
-            "nestedPrefabs": [],
-            "list": []
+            "label": "spriteScriptNode"
         }
     ],
     "plainObjects": [],
@@ -26,7 +24,7 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 3
+        "version": 5
     },
     "prefabProperties": [
         {

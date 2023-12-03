@@ -3,10 +3,10 @@
 
 /* START OF COMPILED CODE */
 
-import ScriptNode from "../../script-nodes-basic/ScriptNode";
+import { ScriptNode } from "@phasereditor2d/scripts-core";
 import Phaser from "phaser";
-import OnPointerDownScript from "../../script-nodes-basic/OnPointerDownScript";
-import PushActionScript from "./PushActionScript";
+import { OnPointerDownScript } from "@phasereditor2d/scripts-core";
+import { PushActionScript } from "@phasereditor2d/scripts-simple-animations";
 import OpenURLActionScript from "./OpenURLActionScript";
 /* START-USER-IMPORTS */
 /* END-USER-IMPORTS */

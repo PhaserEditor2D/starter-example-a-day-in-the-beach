@@ -4,7 +4,7 @@
   "description": "Phaser 3 project template for Phaser Editor 2D v3",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack serve --mode=development --stats-error-details",
+    "start": "webpack serve --mode=development --stats-error-details --no-open",
     "build": "webpack --mode=production && phaser-asset-pack-hashing -r dist",
     "editor": "phasereditor2d-launcher -project . -port 1959",
     "editor-remote": "phasereditor2d-launcher -project . -disable-open-browser -public -port 1959",
@@ -26,7 +26,9 @@
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "phaser": "^3.60.0",
+    "@phasereditor2d/scripts-core": "^1.0.6",
+    "@phasereditor2d/scripts-simple-animations": "^1.0.1",
+    "phaser": "^3.70.0",
     "webpack-dev-server": "^4.7.2"
   }
 }

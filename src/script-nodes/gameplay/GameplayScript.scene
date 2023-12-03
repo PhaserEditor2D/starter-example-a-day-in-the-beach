@@ -4,6 +4,8 @@
     "settings": {
         "exportClass": true,
         "autoImport": true,
+        "prefabObjDisplayFmt": "Gameplay",
+        "displayName": "Gameplay Script",
         "preloadMethodName": "",
         "preloadPackFiles": [],
         "createMethodName": "",
@@ -53,6 +55,6 @@
         "app": "Phaser Editor 2D - Scene Editor",
         "url": "https://phasereditor2d.com",
         "contentType": "phasereditor2d.core.scene.SceneContentType",
-        "version": 4
+        "version": 5
     }
 }

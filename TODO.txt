@@ -1,0 +1,1 @@
+- Error with Phaser 3.70 when going from the Level to the Home scene.
